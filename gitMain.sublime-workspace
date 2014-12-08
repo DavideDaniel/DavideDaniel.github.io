@@ -411,7 +411,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 87.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -507,7 +507,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 746.0
+		"width": 593.0
 	},
 	"console":
 	{
@@ -893,7 +893,7 @@
 		[
 			[
 				"",
-				"~/wdi/gitMain/index.sublime-workspace"
+				"~/wdi/gitMain/gitMain.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -1,34 +1,56 @@
-/** {
-box-sizing: border-box;	
+@font-face {font-family: Arcade; src: url('supermario.ttf');}
+html{
+	background-color: rgba(255, 247, 163, 1);
 }
-*/
 body {
-	display: inline-block;
-	margin: 0 auto;
+    border: thick solid orange;
+    display: block;
+
+
+    text-align: center;
+    font-family: supermario.ttf, sans-serif;
+    font-size: 30px;
 }
 
 header {
-	height: 80%;
-	border: thin solid black;
-	display: block;
-	margin: 0 auto;
+	top:2%;
 }
 .container {
-	border: thin solid black;
-	display: flex;
-	display: -webkit-flex;
-}
+    height: 1000px;
+    width: 800px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 30px;
 
-.inner {
-	border: thin solid black;
-	auto-align: center;
 }
-
-nav {
-	auto-align: center;
-	position: fixed;
-	flex: 2;
-	width: 500px;
+img {
+	vertical-align: center;
 	
 }
 
+}
+#pink {
+	color: rgba(255, 163, 226, 1);
+}
+.bar{
+	position: fixed;
+	width: 100%;
+}
+
+li{
+	
+	display: inline-block;
+}
+a.hover {
+	color: red;
+}
+footer {
+    font-family: supermario.ttf, sans-serif;
+    font-size: 20px;
+    padding: 2px;
+    bottom: 0;
+    text-align: center;
+}

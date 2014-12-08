@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Balloons</title>
+    </head>
+    <style type="text/css">
+    #the_canvas {
+    background-color: #80d7f7;
+    display: block;
+        
+        margin: 0 auto;
+    }
+
+    </style>
+    <body>
+        <canvas id="the_canvas" width="500" height="500"></canvas>
+        <script>
+
+
+        var canvas = document.getElementById('the_canvas');
+        var ctx = canvas.getContext('2d');
+        canvas.addEventListener("click", onClk);
+
+        
+        //balloons (circles) come floating up - vary on difficulty - starting with 20, 30, 40
+        var balloonRad = 20;
+        var riseSpeed = 0;
+        // gravity = 0.05;
+        // bounce = 0.8;
+        var x = Math.floor(Math.random()*(canvas.width-balloonRad));
+        var y = canvas.height-20;
+        var r = Math.floor(Math.random()*(255-0));
+        var g = Math.floor(Math.random()*(255-0));
+        var b = Math.floor(Math.random()*(255-0));
+        var onClk = function(b) {
+        // Store mouse position on click
+        var mx = b.pageX;
+        my = b.pageY;
+
+        // start button functionality
+        if(mx >= colorballx && x <= x + balloonRad) {
+        setInterval(draw, 23);
+        }
+        };
+        colorball = ["rgb("+r+", "+g+", "+b+")", "rgb("+r+", "+g+", "+b+")"];
+        col = 0;
+
+        var draw = function () {
+        y+= riseSpeed;
+        riseSpeed+= -0.005;
+
+        x+=Math.floor(Math.random()*(1+0.5));
+
+        if (y > canvas.width-balloonRad) {
+        riseSpeed = -riseSpeed;
+        }
+        clearBackground();
+
+        for (var i = 0; i < 10; i++) {
+        if (col === 100) {
+        col = 0;
+        }
+        var ballcolor = colorball[col];
+
+        ctx.beginPath();
+        ctx.arc(x,y,30,0,Math.PI*2,false);
+                    ctx.fillStyle = (ballcolor);
+        ctx.fill();
+        ctx.closePath();
+        col++
+        if (x>canvas.width) {
+        x %= canvas.width;
+        x = 0;
+        }
+        }
+        }
+        for (var i = 0; i < col; i++) {
+        draw();
+        }
+        //click to pop balloon
+        // if(mouseX >= startBtn.x && mouseX <= startBtn.x + startBtn.w) {
+        // setInterval(draw, 20);
+
+        // startBtn = {};
+        // }
+        //pop animation
+        ballTouch = false;
+        //collision
+        function Collide(b,s) {
+        if (y < canvas.width - balloonRad) { return ballTouch = true;}
+        }
+        //if balloon collides with top they stack and can't be popped
+        if (ballTouch = true) {
+        refresh();
+        }
+
+        //for each balloon colliding up top produce 2 more
+        //game over if balloons stack till bottom
+
+        //draw
+        function clearBackground(){
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+        };
+        // var balloon = {
+        // 	x: canvas.width/2,
+        // 	// Math.floor(Math.random()*canvas.width/20),
+        // 	y: 250,
+        // 	radius: Math.max(x,y),
+        // 	Xvelocity: Math.PI*-20,
+        // 	Yvelocity: -2,
+
+        // 	draw: function() {
+        // 		clearBackground();
+        // 		ctx.beginPath();
+        // 		ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+        // 	ctx.fillStyle = "red";
+        // 	ctx.fill();
+        // 	ctx.closePath();
+        // 	}
+        // };
+
+        // var x = Math.floor(Math.random()*canvas.width/20),
+        // 	y = 0,
+        // 	r = Math.floor(Math.random()*canvas.width/20),
+        // colors= "red";
+
+        // var balloon = function(x,y,r,c){
+        // this.x = x;
+        // this.y = y;
+        // this.r = r;
+        // this.c = colors;
+        //velocity
+        // this.draw = function() {
+        // 	clearBackground();
+        // 	ctx.beginPath();
+        // 	ctx.arc(this.x,this.y,this.r,0,Math.PI*2,false);
+        // 	ctx.fillStyle = this.c;
+        // 	ctx.fill();
+        // 	ctx.closePath();
+        // }
+        // },
+        // gravity = -1,
+        // 	bounce = 0.8;
+        function refresh() {
+        clearBackground
+        draw();
+        // balloon.y += balloon.Yvelocity;
+        // balloon.Yvelocity += gravity;
+        // if (balloon.y + balloon.r > 0) {
+        // 	balloon.y = canvas.height - balloon.r;
+        // 	balloon.Yvelocity *= -bounce
+        // }
+        }
+
+        setInterval(draw, Math.floor(Math.random()*(60-20)));
+        </script>
+
+    </body>
+</html>
