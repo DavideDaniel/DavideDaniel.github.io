@@ -1,0 +1,89 @@
+/* CSS for background: avoid background on canvas */
+@font-face {font-family: Arcade; src: url('ArcadeClassic.ttf');}
+
+body {
+	background-color: black;	
+}
+
+
+#container {
+	position: relative;
+	top: -30px;
+	width: 600px;
+	height: 600px;
+	display: flex;
+	margin: auto;
+	border: thin solid white;
+	/*padding: px;*/
+}
+
+
+
+#the_canvas {
+    background-color: rgba(33, 33, 33, 1);
+    align-self: center;
+    flex: 2;
+    
+    
+    border: thick solid white;
+}
+
+.Aligner {
+	height: 500px;
+	margin: auto;
+	display: flex;
+	text-align: center;
+	color: white;
+	font-family: Arcade, sans-serif;
+	font-size: 20px;
+}
+.Align1 {
+	flex: 1;
+	align-self:flex-start;
+	
+}
+.Align2 {
+	flex: 2; align-self:center;}
+
+.ScoreAlign {
+	height: 500px;
+	margin: auto;
+	display: flex;
+	text-align: center;
+	color: white;
+	font-family: Arcade, sans-serif;
+	font-size: 20px;
+	align-content: spacebetween;
+}
+#Align3 {align-self:flex-end;
+	flex: 1;}	
+
+
+.Aligner-item--top{
+align-self: flex-start;
+top:0;
+
+}
+
+.Aligner-item--bottom{
+align-self: flex-end;
+
+}
+
+input {
+	width: 40px;
+	height: 40px;
+}
+
+
+header {
+	
+	text-align: center;
+	color: white;
+	padding: 0;
+}
+
+h1 {
+	font-family: Arcade, sans-serif;
+	font-size: 60px;
+}

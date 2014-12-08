@@ -1,0 +1,16 @@
+* {
+box-sizing: border-box;	
+}
+
+.container {
+	display: flex;
+	display: -webkit-flex;
+}
+
+nav {
+	position: fixed;
+	display: inline;
+	width: 50%;
+	top: 10%;
+}
+
