@@ -1,14 +1,24 @@
-@font-face {font-family: Arcade; src: url('supermario.ttf');}
+@font-face {
+    font-family: 'super_mario_256regular';
+    src: url('supermario-webfont.eot');
+    src: url('supermario-webfont.eot?#iefix') format('embedded-opentype'),
+         url('supermario-webfont.woff2') format('woff2'),
+         url('supermario-webfont.woff') format('woff'),
+         url('supermario-webfont.ttf') format('truetype'),
+         url('supermario-webfont.svg#super_mario_256regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 html{
-	background-color: rgba(255, 247, 163, 1);
+	background-color: rgba(255, 238, 46, 0.5);
 }
 body {
-    border: thick solid orange;
+
     display: block;
-
-
     text-align: center;
-    font-family: supermario.ttf, sans-serif;
+    font-family: "super_mario_256regular", sans-serif;
     font-size: 30px;
 }
 
@@ -21,9 +31,11 @@ header {
     margin: auto;
     display: inline-block;
     text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    font-size: 30px;
+    text-outline: black;
+    color: rgba(255, 238, 46, 1);
+    -webkit-text-stroke: 1px black;
+    font-family: "super_mario_256regular", sans-serif;
+    font-size: 50px;
 
 }
 img {
@@ -32,9 +44,10 @@ img {
 }
 
 }
-#pink {
-	color: rgba(255, 163, 226, 1);
+.pink {
+	font-color: rgba(255, 163, 226, 1);
 }
+
 .bar{
 	position: fixed;
 	width: 100%;
@@ -48,7 +61,7 @@ a.hover {
 	color: red;
 }
 footer {
-    font-family: supermario.ttf, sans-serif;
+    font-family: "super_mario_256regular".ttf, sans-serif;
     font-size: 20px;
     padding: 2px;
     bottom: 0;
