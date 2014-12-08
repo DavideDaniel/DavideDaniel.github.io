@@ -1,16 +1,34 @@
-* {
+/** {
 box-sizing: border-box;	
 }
+*/
+body {
+	display: inline-block;
+	margin: 0 auto;
+}
 
+header {
+	height: 80%;
+	border: thin solid black;
+	display: block;
+	margin: 0 auto;
+}
 .container {
+	border: thin solid black;
 	display: flex;
 	display: -webkit-flex;
 }
 
+.inner {
+	border: thin solid black;
+	auto-align: center;
+}
+
 nav {
+	auto-align: center;
 	position: fixed;
-	display: inline;
-	width: 50%;
-	top: 10%;
+	flex: 2;
+	width: 500px;
+	
 }
 

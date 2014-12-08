@@ -411,7 +411,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 87.0,
 		"selected_items":
 		[
 			[
@@ -507,7 +507,7 @@
 				"Set Syntax: JavaScript"
 			]
 		],
-		"width": 736.0
+		"width": 746.0
 	},
 	"console":
 	{
@@ -531,6 +531,13 @@
 	},
 	"file_history":
 	[
+		"/Users/David/wdi/gitMain/index.html",
+		"/Users/David/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
+		"/Users/David/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/David/wdi/gitMain/styleGit.css",
+		"/Users/David/wdi/gitMain/Pong.html",
+		"/Users/David/wdi/gitMain/stylePong.css",
+		"/Users/David/wdi/Pong.js",
 		"/Users/David/wdi/w03/d02/calculator.js",
 		"/Users/David/wdi/peach/peach/w03/d04/cheatsheet.md",
 		"/Users/David/wdi/w03/d03/DOMcreating.js",
@@ -543,14 +550,12 @@
 		"/Users/David/wdi/w03/d05/pageDO/index.html",
 		"/Users/David/wdi/stylecanvas.css",
 		"/Users/David/wdi/Pong.html",
-		"/Users/David/wdi/gitMain/styleGit.css",
 		"/Users/David/wdi/w03/d04/w3d4ex.html",
 		"/Users/David/wdi/w03/d04/randomsquares.html",
 		"/Users/David/wdi/w03/d04/hamster.html",
 		"/Users/David/wdi/w03/d03/foreach.js",
 		"/Users/David/wdi/w03/d04/vanishingcircles.html",
 		"/Users/David/wdi/gitMain/NPM.txt",
-		"/Users/David/wdi/gitMain/index.html",
 		"/Users/David/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
 		"/Users/David/wdi/w03/d04/todo.html",
 		"/Users/David/Library/Application Support/Sublime Text 3/Packages/CodeFormatter/CodeFormatter.sublime-settings",
@@ -653,12 +658,7 @@
 		"/Users/David/wdi/w01/d02/file1.js",
 		"/Users/David/wdi/w01/d03/fizzbuzzloop.js",
 		"/Users/David/wdi/w01/d01/eightees/README.md",
-		"/Users/David/wdi/w01/d02/objectives.txt",
-		"/Users/David/wdi/w01/d02/helloworld.js",
-		"/Users/David/wdi/w01/d02/index.html",
-		"/Users/David/wdi/w01/d02/file2.js",
-		"/Users/David/wdi/w01/d02/file3.js",
-		"/Users/David/wdi/w01/d02/file4.js"
+		"/Users/David/wdi/w01/d02/objectives.txt"
 	],
 	"find":
 	{
@@ -677,6 +677,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"abbreviation",
+			"wrap",
 			"side bar",
 			"sidebar",
 			"body",
@@ -802,9 +804,7 @@
 			"game",
 			"indicate",
 			"startBtn",
-			"flag",
-			"Breakfast",
-			"scoreBlocks"
+			"flag"
 		],
 		"highlight": true,
 		"in_selection": false,
