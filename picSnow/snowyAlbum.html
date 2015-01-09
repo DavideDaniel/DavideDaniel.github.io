@@ -10,147 +10,132 @@
 
         </style>
         <body>
-
-            <div id="background"><h1>Happy Holidays Lover! Click on the snow flakes!</h1><canvas id="canvas"></canvas>
+            <div id="background"><h1>Happy Holidays! Click on the snow flakes!</h1><canvas id="canvas"></canvas>
                 <script type="text/javascript">
 
-                var canvas = document.getElementById("canvas");
-                var ctx = canvas.getContext("2d");
-                var W = window.innerWidth;
-                var H = window.innerHeight;
-                canvas.width = W;
-                canvas.height = H;
+                                var canvas = document.getElementById("canvas");
+                                var ctx = canvas.getContext("2d");
+                                var W = window.innerWidth;
+                                var H = window.innerHeight;
+                                canvas.width = W;
+                                canvas.height = H;
+                                //generate snowflakes
+                                var flakes = 50;
+                                var snow = [];
+                                for(var i = 0; i < flakes; i++)
+                                {
+                                snow.push({
+                                x: Math.random()*W,
+                                y: Math.random()*H,
+                                r: Math.random()*5+1,
+                                density: Math.random()*flakes
+                                })
+                                }
 
-                //generate snowflakes
-                var flakes = 50;
-                var snow = [];
-                for(var i = 0; i < flakes; i++)
-                {
-                snow.push({
-                x: Math.random()*W,
-                y: Math.random()*H,
-                r: Math.random()*5+1,
-                density: Math.random()*flakes
-                })
-                }
+                                function draw()
+                                {
+                                ctx.clearRect(0, 0, W, H);
+                                ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
+                                ctx.beginPath();
+                                for(var i = 0; i < flakes; i++)
+                                {
+                                var flake = snow[i];
+                                ctx.moveTo(flake.x, flake.y);
+                                ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI*2, true);
+                                }
+                                ctx.fill();
+                                animate();
+                                }
+                                
 
-                function draw()
-                {
-                ctx.clearRect(0, 0, W, H);
-                ctx.fillStyle = "rgba(255, 255, 255, 0.5)";
-                ctx.beginPath();
+                                //animate with density and angle determining position
+                                var angle = 0;
+                                function animate()
+                                {
+                                angle += 0.0001;
+                                for(var i = 0; i < flakes; i++)
+                                {
+                                var flake = snow[i];
+                                flake.y += Math.cos(angle+flake.density) + 3 + flake.r/2;
+                                flake.x += Math.sin(angle) * 3;
+                                if(flake.x > W+5 || flake.x < -5 || flake.y > H)
+                                {
+                                snow[i] = {x: Math.random()*W, y: -10, r: flake.r, density: flake.density};
+                                }
 
-                for(var i = 0; i < flakes; i++)
-                {
-                var flake = snow[i];
-                ctx.moveTo(flake.x, flake.y);
-                ctx.arc(flake.x, flake.y, flake.r, 0, Math.PI*2, true);
-                }
-                ctx.fill();
-                animate();
-                }
-                
-
-                //animate with density and angle determining position
-                var angle = 0;
-                function animate()
-                {
-                angle += 0.0001;
-                for(var i = 0; i < flakes; i++)
-                {
-                var flake = snow[i];
-
-                flake.y += Math.cos(angle+flake.density) + 3 + flake.r/2;
-                flake.x += Math.sin(angle) * 3;
-                if(flake.x > W+5 || flake.x < -5 || flake.y > H)
-                {
-                snow[i] = {x: Math.random()*W, y: -10, r: flake.r, density: flake.density};
-                }
-
-                }
-                }
-                setInterval(draw, 20);
-
-
+                                }
+                                }
+                                setInterval(draw, 20);
 
             </script>	</div>
             <div id="overlay">
                 <script>
-                var images = [
-                "pics/1.jpg",
-                "pics/2.jpg",
-                "pics/3.jpg",
-                "pics/4.jpg",
-                "pics/5.jpg",
-                "pics/6.jpg",
-                "pics/7.jpg",
-                "pics/8.jpg",
-                "pics/9.jpg",
-                "pics/10.jpg",
-                "pics/11.jpg",
-                "pics/12.jpg",
-                "pics/13.jpg",
-                "pics/14.jpg",
-                "pics/15.jpg",
-                "pics/16.jpg",
-                "pics/17.jpg",
-                "pics/18.jpg",
-                "pics/19.jpg",
-                "pics/20.jpg",
-                "pics/21.jpg",
-                "pics/22.jpg"
-                ]
-                var i = 0;
+                                var images = [
+                                "pics/1.jpg",
+                                "pics/2.jpg",
+                                "pics/3.jpg",
+                                "pics/4.jpg",
+                                "pics/5.jpg",
+                                "pics/6.jpg",
+                                "pics/7.jpg",
+                                "pics/8.jpg",
+                                "pics/9.jpg",
+                                "pics/10.jpg",
+                                "pics/11.jpg",
+                                "pics/12.jpg",
+                                "pics/13.jpg",
+                                "pics/14.jpg",
+                                "pics/15.jpg",
+                                "pics/16.jpg",
+                                "pics/17.jpg",
+                                "pics/18.jpg",
+                                "pics/19.jpg"
+                                ]
+                                var i = 0;
 
-                overlay.addEventListener("click", function(evt){
+                                overlay.addEventListener("click", function(evt){
 
+                                function addPic(src, width, height) {
+                                var posx = evt.clientX
+                                var posy = evt.clientY
+                                var overlay = document.getElementById("overlay")
+                                var div = document.createElement("div");
+                                div.setAttribute("class", "divImg")
+                                div.setAttribute("id", ""+i+"")
+                                var img = document.createElement("img");
+                                img.src = src;
+                                img.width = width;
+                                img.height = height;
+                                var opacity = 0.01;
+                                img.style.opacity = opacity;
+                                //Position images on center of click location
+                                div.style.left = posx-(img.width/2)+ "px";
+                                div.style.top = posy-(img.height/2) + "px";
 
-                function addPic(src, width, height) {
-                var posx = evt.clientX
-                var posy = evt.clientY
+                                function fadeIn(image) {
+                                    // var opacity = 0.01;  // initial opacity
+                                    var fade = setInterval(function () {
+                                        if (opacity >= 1){
+                                            clearInterval(fade);
+                                        }
+                                        image.style.opacity = opacity;
+                                        image.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
+                                        opacity += opacity * 0.25;
+                                    }, 50);
+                                }
 
-                var overlay = document.getElementById("overlay")
-                var div = document.createElement("div");
-                div.setAttribute("class", "divImg")
-                div.setAttribute("id", ""+i+"")
-                var img = document.createElement("img");
-                img.src = src;
-                img.width = width;
-                img.height = height;
-                var opacity = 0.01;
-                img.style.opacity = opacity;
-                //Position images on center of click location
-                div.style.left = posx-(img.width/2)+ "px";
-                div.style.top = posy-(img.height/2) + "px";
+                                fadeIn(img)
+                                div.appendChild(img)
+                                overlay.appendChild(div);
+                                console.log(img)
+                                console.log(posx)
+                                console.log(posy)
 
-                function fadeIn(image) {
-                    // var opacity = 0.01;  // initial opacity
-                    var fade = setInterval(function () {
-                        if (opacity >= 1){
-                            clearInterval(fade);
-                        }
-                        image.style.opacity = opacity;
-                        image.style.filter = 'alpha(opacity=' + opacity * 100 + ")";
-                        opacity += opacity * 0.1;
+                                }
+                                i=(i+1)%images.length;
+                                addPic(images[i], 185, 185)
 
-                    }, 50);
-                }
-
-                fadeIn(img)
-                div.appendChild(img)
-                overlay.appendChild(div);
-                console.log(img)
-                console.log(posx)
-                console.log(posy)
-
-
-                }
-
-                i=(i+1)%images.length;
-                addPic(images[i], 185, 185)
-
-                })
-
+                                })
                 </script>
 
             </div>
