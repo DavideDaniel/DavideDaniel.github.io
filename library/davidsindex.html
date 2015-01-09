@@ -1,0 +1,89 @@
+<html>
+<head>
+  <!-- <link rel="stylesheet" type="text/css" href="index.css"> -->
+  <link href="expBook.js">
+</head>
+<style type="text/css">
+/*body {
+background-color: #000000  ;
+background-color: #000000  ;
+height: 750px;
+display: flex;
+}*/
+body {
+  background: url("http://kirbymuseum.org/blogs/dynamics/wp-content/uploads/sites/10/2013/03/bookshelf-1.jpg");
+  background-size: cover;
+}
+/*table, td, th {
+border: 1px solid black;
+border-collapse: collapse;
+}
+table {
+color:gray;
+}*/
+/*td {
+text-align: center;
+}*/
+div#blur{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  border: black thin solid;
+}
+div#page {
+  margin: auto;
+  overflow: scroll;
+  height: 700px;
+  width: 450px;
+  border: black thin solid;
+  background-color: white;
+  padding: 45px;
+}
+p {
+  text-align: left;
+  /*width: 100%;*/
+  margin: 20, 0, 20, 0px;
+}
+a {
+  color: rgba(255, 255, 225, 0.9);
+  text-decoration: none;
+}
+</style>
+<body>
+  <p><table><tr><a id="batman"></a></tr></table></p>
+  <div id = "blur">
+    <a href ="http://david.princesspeach.nyc/">HOME</a>
+    <div id = "page"><p>REPLACEME</p></div>
+  </div>
+  <script>
+    // for (i=0;i<books.length;i++)
+    // {
+    // var tr = document.querySelector("tr");
+    // var td = document.createElement("td");
+    // tr.appendChild(td);
+    // var a = document.createElement("a");
+    // a.id = "link";
+    // td.appendChild(a);
+    // a.href=books[i].url.toString();
+    // console.log(books[i].url.toString());
+    // a.innerText=books[i].name
+    // var td1 = document.createElement("td");
+    // tr.appendChild(td1);
+    // td1.innerText =books[i].author;
+    // var td2 = document.createElement("td");
+    // tr.appendChild(td2);
+    // var img = document.createElement("img");
+    // td2.appendChild(img);
+    // img.src = books[i].image;
+    // }
+    // var button = document.getElementById("batman")
+    // var page = document.getElementById("page")
+    // button.addEventListener("click", function(){
+    // page.setAttribute("display", "fixed");
+    // console.log(page)
+    // })
+  </script>
+</body>
+</html>
