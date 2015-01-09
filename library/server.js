@@ -72,7 +72,7 @@ var server = http.createServer( function ( request, response )
 server.listen( 2000 );
 */
 
-var http = require( "http" );
+// var http = require( "http" );
 var fs = require( "fs" );
 var server = http.createServer( function ( request, response )
 {
@@ -158,4 +158,4 @@ var server = http.createServer( function ( request, response )
 
         })})
 
-        server.listen( 80 );
+        // server.listen( 80 );

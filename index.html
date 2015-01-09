@@ -1,18 +1,117 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>david e daniel</title>
-</head>
-<body>
-<h1>david e daniel</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=500" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic|Josefin+Slab:400,700italic' rel='stylesheet' type='text/css'>
+
+            <link rel="stylesheet" href="css/normalize.css" type="text/css">
+            <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+            <link rel="stylesheet" href="css/parallax.css" type="text/css">
+            <script type="text/javascript" src="js/_dependent/greensock/TweenMax.min.js"></script>
+            <script type="text/javascript" src="js/_dependent/jquery.min.js"></script>
+            <script type="text/javascript" src="js/general.js"></script>
+            <script type="text/javascript" src="js/highlight.pack.js"></script>
+            <script type="text/javascript" src="js/modernizr.custom.min.js"></script>
+            <script type="text/javascript" src="js/jquery.scrollmagic.js"></script>
+            <script type="text/javascript" src="js/jquery.scrollmagic.debug.js"></script>
+            <title>david e daniel</title>
+        </head>
+        <body>
+            <ul id="menu">
+                <a href="chatApp/chatclient.html">Chat app</a>
+                <a href="library/index.html">Book app</a>
+                <a href="">Canvas</a>
+                <a href="picSnow/snowyAlbum.html">A snowy album</a>
+            </ul>
+            <div id="mainContainer">
+                <div id="innerContainer">
+                    <div class="scrolling">
+                        <section id="headline">
+                            <div id="description">
+                                <h1>david e daniel</h1>
+
+                            </div>
+                            <script>
+                            var controller;
+                            $(document).ready(function($) {
+                            // init controller
+                            controller = new ScrollMagic({});
+                            });
+                            </script>
+                        </section>
+                        <div class="gap g1"></div>
+
+                            <div id="trigger1" class="gap g0"></div>
+                            <div id = "pin1" class="box1 white">
+                                canvas
+                            </div>
+                            <div class="gap g2"></div>
+                            <script>
+                            $(document).ready(function($) {
+                            // build scene
+                            var scene = new ScrollScene({triggerElement: "#trigger1", duration: 2000})
+                            .setPin("#pin1")
+                            .addTo(controller);
+                            // show indicators (requires debug extension)
+                            scene.addIndicators();
+                            });
+                            </script>
 
 
-	<a href="">Chat app</a>
-	<a href="">Book app</a>
-	<a href="">Calculator</a>
-	<a href="">Canvas</a>
-	<a href="">Holiday work</a>
+                        <div class="gap g4"></div>
+                        <div class="gap g1"></div>
+                        <section class="portfolio fullwidth" id = "trigger2">
+                            <div id="parallaxText">
+                                <h2 class="layer1">bossy</h2>
+                                <h2 class="layer2">ux enthusiast</h2>
+                                <h2 class="layer3">web developer</h2>
+                            </div>
+                            <script>
+                            $(document).ready(function($) {
+                            // build tween
+                            var tween = new TimelineMax ()
+                            .add([
+                            TweenMax.fromTo("#parallaxText .layer1", 1, {scale: 3, autoAlpha: 0.05, bottom: 400}, {bottom: -300, ease: Linear.easeNone}),
+                            TweenMax.fromTo("#parallaxText .layer2", 1, {scale: 2, autoAlpha: 0.3, bottom: 300}, {bottom: -200, ease: Linear.easeNone}),
+                            TweenMax.fromTo("#parallaxText .layer3", 1, {scale: 1, autoAlpha: 0.5, bottom: 200}, {bottom: -100, ease: Linear.easeNone})
+                            ]);
+                            // build scene
+                            var scene = new ScrollScene({triggerElement: "#trigger2", duration: $(window).height()})
+                            .setTween(tween)
+                            .addTo(controller);
 
-</body>
-</html>
+                            // show indicators (requires debug extension)
+                            scene.addIndicators();
+                            });
+                            </script>
+
+                        </section>
+                        <div class="gap g0" id= "trigger3"></div>
+                        <div class="gap vport"></div>
+						<div id="pin2" class="links facebook"><a href="#" onclick="
+                window.open(
+                  'https://www.facebook.com/DavidEDaniel'(location.href),
+                  'width=626,height=436');
+                " style="-webkit-transform: rotate(356deg); transform: rotate(356deg);">
+                <div class="social facebook"><span class="facebook"></span></div>
+            </a></div>
+
+
+                        <script>
+                            $(document).ready(function($) {
+                            // build scene
+                            var scene = new ScrollScene({triggerElement: "#trigger3", duration: 2000})
+                            .setPin("#pin2")
+                            .addTo(controller);
+                            // show indicators (requires debug extension)
+                            scene.addIndicators();
+                            });
+                            </script>
+
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+
