@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"inn",
+				"innerHeight"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"z",
+				"z-index"
+			],
+			[
 				"hea",
 				"header	Tag"
 			],
@@ -531,11 +543,22 @@
 	},
 	"file_history":
 	[
+		"/Users/David/wdi/portfolio/scroll.js",
+		"/Users/David/wdi/portfolio/scrolling.html",
+		"/Users/David/wdi/portfolio/stylesheet.css",
+		"/Users/David/wdi/portfolio/index.html",
+		"/Users/David/wdi/circle.html",
+		"/Users/David/wdi/portfolio/pongPort.js",
+		"/Users/David/wdi/portfolio/circPort.js",
 		"/Users/David/wdi/gitMain/index.html",
+		"/Users/David/wdi/gitMain/pollocky.html",
+		"/Users/David/wdi/lifeofpi.css",
+		"/Users/David/wdi/gitMain/Pong.html",
+		"/Users/David/wdi/gitMain/Pong.js",
+		"/Users/David/Desktop/David Daniel WDI admissions project/index.html",
 		"/Users/David/Library/Application Support/Sublime Text 3/Packages/Emmet/Default (OSX).sublime-keymap",
 		"/Users/David/Library/Application Support/Sublime Text 3/Packages/Emmet/Emmet.sublime-settings",
 		"/Users/David/wdi/gitMain/styleGit.css",
-		"/Users/David/wdi/gitMain/Pong.html",
 		"/Users/David/wdi/gitMain/stylePong.css",
 		"/Users/David/wdi/Pong.js",
 		"/Users/David/wdi/w03/d02/calculator.js",
@@ -647,18 +670,7 @@
 		"/Users/David/wdi/w01/d03/fizzback.js",
 		"/Users/David/wdi/w01/d03/samuel.js",
 		"/Users/David/wdi/w01/d03/vowels.js",
-		"/Users/David/wdi/w01/d03/vowelsreal.js",
-		"/Users/David/wdi/w01/d03/randomnum.js",
-		"/Users/David/wdi/w01/d03/reverse.js",
-		"/Users/David/wdi/w01/d03/ajskfhskajfgak",
-		"/Users/David/wdi/w01/d03/ass2.js",
-		"/Users/David/wdi/w01/d02/fizzbuzz.js",
-		"/Users/David/wdi/w01/d03/awkdate.js",
-		"/Users/David/wdi/w01/d03/ex1.js",
-		"/Users/David/wdi/w01/d02/file1.js",
-		"/Users/David/wdi/w01/d03/fizzbuzzloop.js",
-		"/Users/David/wdi/w01/d01/eightees/README.md",
-		"/Users/David/wdi/w01/d02/objectives.txt"
+		"/Users/David/wdi/w01/d03/vowelsreal.js"
 	],
 	"find":
 	{
@@ -677,6 +689,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"perspe",
+			"Nunito",
+			"img",
 			"abbreviation",
 			"wrap",
 			"side bar",
@@ -801,10 +816,7 @@
 			"ninjato",
 			"blue",
 			"Leonardo",
-			"game",
-			"indicate",
-			"startBtn",
-			"flag"
+			"game"
 		],
 		"highlight": true,
 		"in_selection": false,

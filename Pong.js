@@ -18,6 +18,7 @@ var Player = function ( x, y )
         
     }
 };
+
 //Ball - independent object
 var Ball = function ()
 {
@@ -38,6 +39,7 @@ var Ball = function ()
         this.y += this.velocityY;
     }
 };
+
 //	Game functionality
 // 	==================
 // 	Pulls variables from other objects and sets static dimensions.

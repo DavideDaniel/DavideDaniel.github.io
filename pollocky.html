@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-     <head>
-          <meta charset="UTF-8">
-          <style type="text/css">
-          .container {
-               display: flexblock;
-               margin: 0 auto;
-               text-align: center;
-               width: 800px;
-               height: 800px
-          }
-          
-          #canV {
-               margin: 0 auto;
-               flex: 2;
-               display: block;
-               height: 80%;
-               width: 80%;
-               text-align: center;
-          }
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+        .container {
+        display: flexblock;
+        margin: 0 auto;
+        text-align: center;
+        width: 800px;
+        height: 800px
+        }
 
-          canvas {
-               /*border-radius: 50px;*/
-               
-               background-color: rgba(255, 255, 274, 0.23);
-               /*margin: 0;*/
-          }
-          
-          #butt {
-               
-               width: 20%;
-               margin: 0 auto;
-               padding: 0;
-               bottom:0;
-               flex: 1;
-               height: 5%;
-               text-align: center;
+        #canV {
+        margin: 0 auto;
+        flex: 2;
+        display: block;
+        height: 80%;
+        width: 80%;
+        text-align: center;
+        }
+        canvas {
+        /*border-radius: 50px;*/
+        background-color: rgba(255, 255, 274, 0.23);
+        /*margin: 0;*/
+        }
+        #butt {
 
-          }
-          button {
-               
-               background-color: rgba(255, 255, 255, .85);
-               border-radius: 100px;
-               outline: 0;
-               padding: 20px;
-               margin: 0 auto;
-          }
-          
-          </style>
+        width: 20%;
+        margin: 0 auto;
+        padding: 0;
+        bottom:0;
+        flex: 1;
+        height: 5%;
+        text-align: center;
+        }
+        button {
+        background-color: rgba(255, 255, 255, .85);
+        border-radius: 100px;
+        outline: 0;
+        padding: 20px;
+        margin: 0 auto;
+        }
+        </style>
 
-          
-          <title>Random circles</title>
-          
-     </head>
-     <body>
-          
-          <div class = "container"><div id="canV">
-               <canvas id="canvas" width="650" height="650"></canvas>
-               </div>
-               <div id="butt">
-               <button id="start">Start</button>
-               <button id="stop">Stop</button>
-               </div>
-               </div>
-          <script type="text/javascript">
-          
-          
-          var draw = function() {
-          
-          var canvas = document.getElementById('canvas');
-          var ctx = canvas.getContext('2d');
-          var rad = Math.floor(Math.random()*(20 - 5));
-          var x = Math.floor(Math.random()*(800+ 1));
-          var y = Math.floor(Math.random()*(800+ 1));
-          var numOfCircs = 10; 
-          
-          // var randColor = Math.floor(Math.random()*255+1);
-          var r = Math.floor(Math.random()*255+1);
-          var g = Math.floor(Math.random()*255+1);
-          var b = Math.floor(Math.random()*255+1);
-          // var a = Math.floor(Math.random()*0.5);
-          
-          ctx.fillStyle = "rgba("+r+", "+g+", "+b+", 0.25)";
-          ctx.beginPath();
-          
+        <title>Random circles</title>
+    </head>
+    <body>
+        <div class = "container"><div id="canV">
+            <canvas id="canvas" width="650" height="650"></canvas>
+        </div>
+        <div id="butt">
+            <button id="start">Start</button>
+            <button id="stop">Stop</button>
+        </div>
+    </div>
+    <script type="text/javascript">
+    var switchOn = true;
+    var draw = function() {
 
-          for (var i = 0; i < numOfCircs; i++) {
-          
-          ctx.arc(x, y, rad, 0, Math.PI*2, true);
-          }
-          ctx.fill();
-          };
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    // var radius = 10;
+    var randRad = Math.floor(Math.random()*(25 - 1));
+    var x = Math.floor(Math.random()*(800+ 1));
+    var y = Math.floor(Math.random()*(800+ 1));
+    var numOfCircs = 10;
 
-          var refresh = function () {
-          var canvas = document.getElementById('canvas');
-          var ctx = canvas.getContext('2d');
-          ctx.clearRect(0, 0, canvas.width, canvas.height); 
-          }
-          
-          // var direction = 0;
-          
-          // var animate = function() {
-          //      animate += 0.00001;
-          //      for (var i = 0; i < Things.length; i++) {
-          //           Things[i]
-          //      };
-          // }
-          
-             var switchOn = true;
-          var Switch = function () {
-               if (switchOn === false) {
-                    
-                    setTimeout(draw, 1);
-                    refresh();
-                    switchOn = true;
-               } else {
-                    setInterval(draw, 23);
-                    switchOn = false;
-               }
-          }
+    // var initiate = function(){
+    // setInterval(draw_ex01,20);
+    // }
+    // var randColor = Math.floor(Math.random()*255+1);
+    var r = Math.floor(Math.random()*255+1);
+    var g = Math.floor(Math.random()*255+1);
+    var b = Math.floor(Math.random()*255+1);
+    var a = 1;
 
-          
-          
+    if (switchOn == true) {
 
-          var startButton = document.querySelector("#start");
+    for (var i = 0; i < numOfCircs; i++) {
+    // if(radius >= 50) {
+    // radius = 0;
+    // } else {
+    // radius+=1;
+    // }
 
-          startButton.addEventListener("click", Switch);
-          
-          </script>
-     </body>
+    if(a <= 0){
+    a=1;
+    } else {
+    a-=.01;
+    }
+    ctx.arc(x, y, randRad, 0, Math.PI*2, true);
+
+    }
+    ctx.fill();
+
+    ctx.fillStyle = "rgba("+r+", "+g+", "+b+", "+a+")";
+    ctx.beginPath();
+
+    }
+    else{
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.font = "bold 50px/60px 'helvetica' ";
+    ctx.fillStyle = "rgba(140, 239, 113, 1)";
+    ctx.fillText('Click Start', canvas.width/2, canvas.height/2)};
+    }
+
+
+    var refresh = function () {
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    }
+    // var direction = 0;
+    // var animate = function() {
+        //      animate += 0.00001;
+        //      for (var i = 0; i < Things.length; i++) {
+            //           Things[i]
+        //      };
+    // }
+
+    var Switch = function () {
+    if (switchOn == false) {
+    setInterval(draw, 200);
+    refresh();
+    switchOn = true;
+    } else {
+    setInterval(draw, 20);
+    switchOn = false;
+    }
+    }
+
+    var startButton = document.querySelector("#start");
+    startButton.addEventListener("click", Switch);
+    var stopButton = document.querySelector("#stop");
+    stopButton.addEventListener("click", Switch);
+    </script>
+</body>
 </html>

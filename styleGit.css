@@ -40,13 +40,9 @@ header {
 }
 img {
 	vertical-align: center;
-	
-}
+	}
 
-}
-.pink {
-	font-color: rgba(255, 163, 226, 1);
-}
+
 
 .bar{
 	position: fixed;
@@ -67,3 +63,6 @@ footer {
     bottom: 0;
     text-align: center;
 }
+#pink {
+	color: #f575ea;
+	font-weight: bold;

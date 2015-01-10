@@ -20,8 +20,7 @@
 
         var canvas = document.getElementById('the_canvas');
         var ctx = canvas.getContext('2d');
-        canvas.addEventListener("click", onClk);
-
+        canvas.addEventListener("click", onClk	);
         
         //balloons (circles) come floating up - vary on difficulty - starting with 20, 30, 40
         var balloonRad = 20;
@@ -39,6 +38,29 @@
         my = b.pageY;
 
         // start button functionality
+        
+    var balloon = document.getElementById('myCanvas'),
+    balloonLeft = balloon.offsetLeft,
+    balloonTop = balloon.offsetTop,
+    context = balloon.getContext('2d'),
+    balloonents = [];
+
+		// Add event listener for `click` events.
+	balloon.addEventListener('click', function(event) {
+    var x = event.pageX - balloonLeft,
+        y = event.pageY - balloonTop;
+
+    // Collision detection between clicked offset and element.
+    balloon.forEach(function(element) {
+        if (y > element.top && y < element.top + element.height 
+            && x > element.left && x < element.left + element.width) {
+            alert('clicked an element');
+        }
+    });
+
+}, false);
+
+
         if(mx >= colorballx && x <= x + balloonRad) {
         setInterval(draw, 23);
         }
@@ -145,7 +167,7 @@
         function refresh() {
         clearBackground
         draw();
-        // balloon.y += balloon.Yvelocity;
+        // balloon.y += balloon.Yvelocity;o
         // balloon.Yvelocity += gravity;
         // if (balloon.y + balloon.r > 0) {
         // 	balloon.y = canvas.height - balloon.r;
