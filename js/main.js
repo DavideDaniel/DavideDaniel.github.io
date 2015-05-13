@@ -1,4 +1,3 @@
-var commentDoc = require('commentdoc');
 // SCROLLING //
 'use strict';
 $(function () {
@@ -192,5 +191,3 @@ if (!$('html')
         .scroll(parallaxPosition);
     parallaxPosition();
 }
-
-commentDoc.extract('main.js', 'mainComms.md');
