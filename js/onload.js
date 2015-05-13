@@ -25,7 +25,7 @@ $(document)
                     }
                 }]
             });
-            $('.testimonials')
+        $('.testimonials')
             .slick({
                 autoplay: true,
                 autoplaySpeed: 10000,
@@ -52,12 +52,10 @@ $(document)
 
         $('h2.line-around')
             .each(function (index, heading) {
-                console.log(heading);
-                console.log(index);
 
                 headingText = $(heading)
                     .text()
-                console.log(headingText);
+
                 var myFullText = '<span>' + headingText + '</span>';
                 $(heading)
                     .html(myFullText);
