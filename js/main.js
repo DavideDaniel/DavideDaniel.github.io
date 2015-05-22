@@ -186,7 +186,7 @@ if (!$('html')
     .hasClass('touch')) {
     $(window)
         .resize(parallaxPosition);
-    // $(window).focus(parallaxPosition);
+    $(window).focus(parallaxPosition);
     $(window)
         .scroll(parallaxPosition);
     parallaxPosition();

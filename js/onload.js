@@ -1,14 +1,14 @@
 $(document)
     .ready(function () {
-
+        // sliders
         $('.sampleWork')
             .slick({
                 autoplay: true,
-                autoplaySpeed: 10000,
+                autoplaySpeed: 5000,
                 centerMode: true,
                 centerPadding: '60px',
                 cssEase: 'ease',
-                speed: 10000,
+                speed: 5000,
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 responsive: [{
@@ -28,11 +28,15 @@ $(document)
         $('.testimonials')
             .slick({
                 autoplay: true,
-                autoplaySpeed: 10000,
+                autoplaySpeed: 5000,
                 centerMode: true,
                 centerPadding: '60px',
+                dots: true,
+                dotsClass: 'slick-dots',
+                draggable: true,
                 cssEase: 'ease',
-                speed: 10000,
+                easing: 'linear',
+                speed: 300,
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 responsive: [{
