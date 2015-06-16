@@ -3,19 +3,18 @@ $(document)
         // sliders
         $('.sampleWork')
             .slick({
-                autoplay: true,
-                autoplaySpeed: 5000,
+                autoplay: false,
                 centerMode: true,
                 centerPadding: '60px',
                 cssEase: 'ease',
-                speed: 5000,
+                speed: 1000,
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
                 responsive: [{
                     breakpoint: 600,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2
+                        slidesToScroll: 1
                     }
                 }, {
                     breakpoint: 480,
@@ -28,7 +27,7 @@ $(document)
         $('.testimonials')
             .slick({
                 autoplay: true,
-                autoplaySpeed: 5000,
+                autoplaySpeed: 3000,
                 centerMode: true,
                 centerPadding: '60px',
                 dots: true,
@@ -42,7 +41,7 @@ $(document)
                 responsive: [{
                     breakpoint: 600,
                     settings: {
-                        slidesToShow: 2,
+                        slidesToShow: 1,
                         slidesToScroll: 2
                     }
                 }, {
