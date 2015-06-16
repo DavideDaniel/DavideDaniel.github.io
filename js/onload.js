@@ -3,21 +3,19 @@ $(document)
         // sliders
         $('.sampleWork')
             .slick({
-                autoplay: false,
+                autoplay: true,
+                autoplaySpeed: 3000,
                 centerMode: true,
                 centerPadding: '60px',
+                draggable: true,
+                dotsClass: 'slick-dots',
                 cssEase: 'ease',
-                speed: 1000,
+                easing: 'linear',
+                speed: 500,
                 slidesToShow: 3,
-                slidesToScroll: 3,
+                slidesToScroll: 1,
                 responsive: [{
                     breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }, {
-                    breakpoint: 480,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
@@ -39,13 +37,7 @@ $(document)
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 responsive: [{
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                }, {
-                    breakpoint: 480,
+                    breakpoint: 800,
                     settings: {
                         slidesToShow: 1,
                         slidesToScroll: 1
