@@ -1,30 +1,25 @@
 $(document)
   .ready(function () {
     // sliders
-    debugger
-    // $('.sampleWork')
-    //   .slick({
-    //     initialSlide: 0,
-    //     autoplay: true,
-    //     autoplaySpeed: 3000,
-    //     centerMode: true,
-    //     centerPadding: '50px',
-    //     draggable: false,
-    //     speed: 500,
-    //     slidesToShow: 3,
-    //     slidesToScroll: 1,
-    //     responsive: [{
-    //       breakpoint: 600,
-    //       settings: {
-    //         slidesToShow: 1,
-    //         slidesToScroll: 1
-    //       }
-    //     }]
-    //   });
     $('.sampleWork')
       .slick({
+        autoplay: true,
+        autoplaySpeed: 3000,
+        centerMode: true,
+        centerPadding: '60px',
+        draggable: true,
+        dotsClass: 'slick-dots',
+        cssEase: 'ease',
+        speed: 1000,
         slidesToShow: 3,
-        mobileFirst: true
+        slidesToScroll: 1,
+        responsive: [{
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
       });
 
     $('.testimonials')
@@ -58,10 +53,8 @@ $(document)
 
     $('h2.line-around')
       .each(function (index, heading) {
-
         headingText = $(heading)
           .text()
-
         var myFullText = '<span>' + headingText + '</span>';
         $(heading)
           .html(myFullText);
