@@ -6,7 +6,7 @@ $(document)
         autoplay: true,
         autoplaySpeed: 3000,
         centerMode: true,
-        centerPadding: '60px',
+        centerPadding: '50px',
         draggable: true,
         dotsClass: 'slick-dots',
         cssEase: 'ease',
@@ -14,7 +14,7 @@ $(document)
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-          breakpoint: 800,
+          breakpoint: 600,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1
@@ -45,7 +45,7 @@ $(document)
         responsive: [{
           breakpoint: 800,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
             slidesToScroll: 1
           }
         }, {
