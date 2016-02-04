@@ -20,8 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var nameArray = [];
 
   promptButton.addEventListener("click", function () {
-    alertify.prompt("Hi.. What's your name?", function (entry,
-      string) {
+    alertify.prompt("Hi.. What's your name?", function (entry, string) {
       if (entry) {
         hello(string, nameArray);
       }

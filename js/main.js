@@ -171,16 +171,13 @@ function parallaxPosition(e) {
         bottom = bottom + overflowH;
 
         // value with linear interpolation
-        var value = min + (max - min) * (currentWindow - top) / (bottom -
-          top);
+        var value = min + (max - min) * (currentWindow - top) / (bottom - top);
 
         // set background-position
         var horizontalPosition = path.attr('data-horiz-pos');
-        horizontalPosition = horizontalPosition ? horizontalPosition :
-          '50%';
+        horizontalPosition = horizontalPosition ? horizontalPosition : '50%';
         $(this)
-          .css('background-position', horizontalPosition + ' ' + value +
-            'px');
+          .css('background-position', horizontalPosition + ' ' + value + 'px');
       }
     });
 }
