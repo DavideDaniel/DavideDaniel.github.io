@@ -1,0 +1,67 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Color palette */
+  --primary-color: #fa4542;
+  --secondary-color: #333;
+  --text-color: #333;
+  --light-text: #777;
+  --bg-color: #fff;
+  --bg-light: #f8f8f8;
+
+  /* Fonts - matching original site */
+  --font-primary: 'Lato', sans-serif;
+  --font-heading: 'Josefin Sans', sans-serif;
+
+  /* Spacing */
+  --section-padding: 80px 20px;
+  --container-max-width: 1170px;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  padding: var(--section-padding);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

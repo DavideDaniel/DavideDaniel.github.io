@@ -1,7 +1,33 @@
-# Folders to ignore
+# Dependencies
 node_modules
+
+# Build output
+dist
 temp
 
-# Files
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Old static site backup
+old-static-site
+
+# Private files
 silhoutte.jpg
