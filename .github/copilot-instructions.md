@@ -2,21 +2,32 @@
 
 ## Project Context
 
-This is a React + Vite portfolio website with multiple pages, deployed to GitHub Pages. The codebase follows modern React patterns with TypeScript.
+This is a React + Vite portfolio website with multiple pages, deployed to GitHub Pages. The codebase uses modern JavaScript (ES2020+) with JSDoc for type hints to maximize AI assistance.
 
 ## Code Style & Patterns
 
 ### React Components
-- Use functional components with TypeScript
+- Use functional components with modern JavaScript
 - Prefer named exports over default exports for better refactoring
 - Use React hooks (useState, useEffect, useCallback, useMemo) appropriately
-- Add JSDoc comments with `@ai-context` tags to explain component purpose
+- Add JSDoc comments with `@ai-context` tags to explain component purpose and types
 
-### TypeScript
-- Use explicit types for props and state
-- Avoid `any` type - use `unknown` or proper types
-- Leverage type inference where appropriate
-- Use interfaces for object shapes
+### JavaScript with JSDoc
+- Use JSDoc annotations for function parameters, return types, and complex objects
+- JSDoc provides type hints for AI tools and IDEs without TypeScript overhead
+- Document component props with `@param` tags
+- Use `@typedef` for reusable type definitions
+- Example:
+  ```javascript
+  /**
+   * @param {Object} props
+   * @param {string} props.title - The title to display
+   * @param {() => void} props.onClick - Click handler
+   */
+  function Button({ title, onClick }) {
+    // Component code
+  }
+  ```
 
 ### Styling
 - CSS files are located in `src/styles/`
@@ -30,7 +41,7 @@ src/
   ├── pages/         # Page components (Welcome, Bio, etc.)
   ├── components/    # Reusable components
   ├── styles/        # CSS files
-  └── main.tsx       # App entry point
+  └── main.jsx       # App entry point
 ```
 
 ## AI-Assisted Development Guidelines
@@ -45,15 +56,18 @@ src/
 ### Common Patterns to Follow
 
 #### Component Structure
-```typescript
+```javascript
 /**
  * ComponentName - Brief description
  *
  * @ai-context Explain what this component does and when to use it
+ * @param {Object} props
+ * @param {string} props.prop1 - Description of prop1
+ * @param {number} props.prop2 - Description of prop2
  */
-function ComponentName({ prop1, prop2 }: ComponentNameProps) {
+function ComponentName({ prop1, prop2 }) {
   // Hooks at the top
-  const [state, setState] = useState<Type>(initialValue)
+  const [state, setState] = useState(initialValue)
 
   // Event handlers
   const handleEvent = useCallback(() => {
@@ -95,8 +109,8 @@ export default ComponentName
    - Pages go in `src/pages/`
    - Reusable components in `src/components/`
 
-2. **Add routes in App.tsx**
-   ```typescript
+2. **Add routes in App.jsx**
+   ```javascript
    <Route path="/new-page" element={<NewPage />} />
    ```
 
@@ -128,7 +142,7 @@ Follow conventional commits:
 - Built files go to `dist/` directory
 - Use `npm run build` before deploying
 - Deploy with `npm run deploy` (uses gh-pages)
-- Base URL is configured in `vite.config.ts`
+- Base URL is configured in `vite.config.js`
 
 ## Helpful Commands
 
@@ -145,11 +159,15 @@ npm run deploy     # Deploy to GitHub Pages
 
 Use `@ai-context` in comments to provide context for AI assistants:
 
-```typescript
+```javascript
 /**
  * @ai-context This function handles smooth scrolling to sections.
  * It replaces the jQuery smooth scroll from the original site.
+ * @param {string} targetId - The ID of the element to scroll to
  */
+function smoothScrollTo(targetId) {
+  // Implementation
+}
 ```
 
 This helps both GitHub Copilot and Claude understand the codebase better!

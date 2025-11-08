@@ -7,11 +7,12 @@
   },
   "editor.tabSize": 2,
 
-  // TypeScript settings
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  // JavaScript settings
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "relative",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.suggest.completeFunctionCalls": true,
 
   // GitHub Copilot settings
   "github.copilot.enable": {
@@ -19,8 +20,8 @@
     "yaml": true,
     "plaintext": false,
     "markdown": true,
-    "typescript": true,
-    "typescriptreact": true
+    "javascript": true,
+    "javascriptreact": true
   },
   "github.copilot.editor.enableAutoCompletions": true,
 

@@ -1,11 +1,11 @@
 # David Daniel Portfolio
 
-A modern, multi-page portfolio website built with React, TypeScript, and Vite. Deployed to GitHub Pages.
+A modern, multi-page portfolio website built with React and Vite. Uses JSDoc for AI-friendly type hints. Deployed to GitHub Pages.
 
 ## 🚀 Features
 
 - **Multi-page React Application** with React Router
-- **TypeScript** for type safety
+- **JSDoc Type Hints** - AI-friendly type documentation without TypeScript overhead
 - **Vite** for fast development and optimized builds
 - **Responsive Design** - mobile-first approach
 - **AI-Assisted Development Ready** - configured for GitHub Copilot and Claude
@@ -19,8 +19,8 @@ A modern, multi-page portfolio website built with React, TypeScript, and Vite. D
 │   ├── pages/           # Page components (Welcome, Bio, etc.)
 │   ├── components/      # Reusable components
 │   ├── styles/          # CSS files
-│   ├── App.tsx          # Main app with routing
-│   └── main.tsx         # App entry point
+│   ├── App.jsx          # Main app with routing
+│   └── main.jsx         # App entry point
 ├── public/              # Static assets (images, PDFs, etc.)
 ├── .github/
 │   ├── workflows/       # GitHub Actions
@@ -32,7 +32,7 @@ A modern, multi-page portfolio website built with React, TypeScript, and Vite. D
 ## 🛠️ Tech Stack
 
 - **React 18** - UI library
-- **TypeScript** - Type safety
+- **JavaScript (ES2020+)** - Modern JavaScript with JSDoc type hints
 - **Vite** - Build tool and dev server
 - **React Router** - Client-side routing
 - **CSS3** - Styling with CSS custom properties
@@ -109,13 +109,14 @@ The project structure and comments are designed to work seamlessly with Claude f
 
 - **Comprehensive comments** with `@ai-context` tags
 - **Consistent code structure** for better pattern recognition
-- **TypeScript types** for clear interfaces
+- **JSDoc type annotations** for clear interfaces and better AI understanding
 - **Modular components** for easier understanding
 
 ## 📝 Code Style
 
-- **ESLint** configuration for React + TypeScript
+- **ESLint** configuration for React + JSX
 - **Prettier** for consistent formatting
+- **JSDoc** for inline type documentation and AI assistance
 - Run `npm run lint` to check for issues
 - Run `npm run format` to auto-format code
 
@@ -138,11 +139,12 @@ Portfolio page with:
 
 The original static site (HTML/CSS/jQuery) has been refactored into a modern React application:
 
-- ✅ Vite + React + TypeScript setup
-- ✅ Multi-page routing
+- ✅ Vite + React + JavaScript setup
+- ✅ Multi-page routing with React Router
 - ✅ New welcome page
 - ✅ Assets migrated to public folder
 - ✅ Modern CSS with custom properties
+- ✅ JSDoc annotations for AI assistance
 - ⏳ Bio page content migration (in progress)
 - ⏳ jQuery to React hooks conversion
 
@@ -182,15 +184,16 @@ This builds the project and pushes to the `gh-pages` branch.
 
 ### Vite Configuration
 
-- Base URL: `/` (configured in `vite.config.ts`)
+- Base URL: `/` (configured in `vite.config.js`)
 - Output directory: `dist`
 - Source maps enabled for debugging
 
-### TypeScript Configuration
+### JavaScript Configuration
 
-- Strict mode enabled
-- Modern ES2020 target
+- Modern ES2020+ features
+- JSDoc for type hints and AI assistance
 - React JSX transform
+- jsconfig.json for better IDE support
 
 ### GitHub Pages Settings
 
@@ -203,7 +206,7 @@ Ensure in your repository settings:
 
 - [React Documentation](https://react.dev)
 - [Vite Documentation](https://vitejs.dev)
-- [TypeScript Documentation](https://www.typescriptlang.org/docs)
+- [JSDoc Documentation](https://jsdoc.app/)
 - [React Router Documentation](https://reactrouter.com)
 
 ## 🤝 Contributing
@@ -220,11 +223,11 @@ This project is open source and available under the MIT License.
 
 ## 👨‍💻 Author
 
-**David Daniel** - Web Developer
+**David Enoch Daniel** - Web Developer
 
 - GitHub: [@DavideDaniel](https://github.com/DavideDaniel)
 - Portfolio: [davidedaniel.github.io](https://davidedaniel.github.io)
 
 ---
 
-Built with ❤️ using React, TypeScript, and Vite | Optimized for AI-assisted development
+Built with ❤️ using React and Vite | Optimized for AI-assisted development with JSDoc
