@@ -35,12 +35,14 @@ function Welcome() {
             </Link>
           </div>
 
-          {/* Placeholder for future pages */}
-          <div className="nav-card placeholder">
-            <h2>🚧 More Coming Soon</h2>
+          <div className="nav-card">
+            <h2>💭 Musings on AI Engineering</h2>
             <p>
-              Additional pages and projects will be added here as the site grows.
+              Practical insights on AI's impact on software engineering—covering workflows, tools, and best practices.
             </p>
+            <Link to="/musings" className="nav-link">
+              Read Musings →
+            </Link>
           </div>
         </nav>
 
