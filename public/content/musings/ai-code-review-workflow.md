@@ -1,5 +1,7 @@
 # Integrating AI into Code Review Workflows
 
+*November 9, 2025*
+
 Code review is where we catch bugs, share knowledge, and maintain standards. AI assistants are increasingly being integrated into this critical process - but how do we do it without losing the human insight that makes reviews valuable?
 
 ## The Promise and the Pitfall
@@ -266,3 +268,7 @@ The best code review process leverages AI's speed and consistency while preservi
 ---
 
 **How does your team handle code review?** Are you using AI tools? What's working and what isn't? Share your experiences—the community learns from real-world implementations.
+
+---
+
+*This article was created with AI assistance using Claude Sonnet 4.5 (claude-sonnet-4-5-20250929).*

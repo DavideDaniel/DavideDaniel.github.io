@@ -1,5 +1,7 @@
 # Prompt Engineering for Software Engineers
 
+*November 9, 2025*
+
 As developers increasingly work alongside AI assistants, prompt engineering has become an essential skill. But unlike traditional APIs with defined interfaces, AI models respond to natural language - making the quality of your questions as important as your code.
 
 ## The Developer's Advantage
@@ -219,3 +221,7 @@ As AI tools become central to development workflows, this skill will differentia
 ---
 
 **What prompt patterns work best for you?** Share your discoveries—we're all learning together.
+
+---
+
+*This article was created with AI assistance using Claude Sonnet 4.5 (claude-sonnet-4-5-20250929).*
