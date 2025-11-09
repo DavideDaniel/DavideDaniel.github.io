@@ -6,7 +6,7 @@
       "slug": "ai-pair-programming-best-practices",
       "category": "AI Tools",
       "topics": ["AI", "Development Workflow", "Best Practices"],
-      "date": "2025-01-15",
+      "date": "2025-11-09",
       "author": "David Daniel",
       "excerpt": "Practical strategies for effective collaboration with AI coding assistants to enhance productivity without compromising code quality.",
       "file": "/content/musings/ai-pair-programming-best-practices.md"
@@ -17,7 +17,7 @@
       "slug": "prompt-engineering-for-developers",
       "category": "AI Engineering",
       "topics": ["AI", "Prompting", "Communication"],
-      "date": "2025-01-10",
+      "date": "2025-11-09",
       "author": "David Daniel",
       "excerpt": "How to craft effective prompts that yield better code suggestions, clearer explanations, and more accurate solutions.",
       "file": "/content/musings/prompt-engineering-for-developers.md"
@@ -28,7 +28,7 @@
       "slug": "ai-code-review-workflow",
       "category": "Workflows",
       "topics": ["AI", "Code Review", "Team Collaboration"],
-      "date": "2025-01-05",
+      "date": "2025-11-09",
       "author": "David Daniel",
       "excerpt": "Strategies for incorporating AI assistants into your code review process while maintaining human oversight and learning opportunities.",
       "file": "/content/musings/ai-code-review-workflow.md"
