@@ -1,0 +1,38 @@
+/* Main App Styles */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Loading states */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-size: 1.2rem;
+  color: var(--light-text);
+}
+
+/* Error states */
+.error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.error h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.error p {
+  color: var(--light-text);
+  margin-bottom: 1.5rem;
+}

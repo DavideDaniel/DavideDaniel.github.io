@@ -1,0 +1,135 @@
+/* Welcome/Landing Page Styles */
+
+.welcome-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+}
+
+.welcome-content {
+  max-width: 900px;
+  background: white;
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome-header h1 {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.welcome-header .subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 300;
+}
+
+.welcome-description {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--light-text);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.welcome-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.nav-card {
+  background: var(--bg-light);
+  border-radius: 12px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nav-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-color);
+}
+
+.nav-card.placeholder {
+  opacity: 0.6;
+}
+
+.nav-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--secondary-color);
+}
+
+.nav-card p {
+  color: var(--light-text);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #e03e3b;
+  opacity: 1;
+}
+
+.welcome-footer {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e0e0e0;
+  color: var(--light-text);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-content {
+    padding: 40px 30px;
+  }
+
+  .welcome-header h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-header .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .welcome-nav {
+    grid-template-columns: 1fr;
+  }
+}

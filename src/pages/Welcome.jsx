@@ -1,0 +1,56 @@
+import { Link } from 'react-router-dom'
+import '../styles/Welcome.css'
+
+/**
+ * Welcome/Landing page component
+ *
+ * This is the new main landing page that explains the multi-page structure
+ * and provides navigation to different sections of the site.
+ *
+ * @ai-context This is the entry point for visitors. Keep it clean and navigable.
+ */
+function Welcome() {
+  return (
+    <div className="welcome-container">
+      <div className="welcome-content">
+        <header className="welcome-header">
+          <h1>Welcome to My Portfolio</h1>
+          <p className="subtitle">David Daniel | Web Developer</p>
+        </header>
+
+        <section className="welcome-description">
+          <p>
+            This site hosts multiple pages showcasing different aspects of my work and experience.
+            Explore the sections below to learn more about me and my projects.
+          </p>
+        </section>
+
+        <nav className="welcome-nav">
+          <div className="nav-card">
+            <h2>📝 Bio & Portfolio</h2>
+            <p>
+              View my professional bio, work samples, experience, testimonials, and contact information.
+            </p>
+            <Link to="/bio" className="nav-link">
+              Visit Bio →
+            </Link>
+          </div>
+
+          {/* Placeholder for future pages */}
+          <div className="nav-card placeholder">
+            <h2>🚧 More Coming Soon</h2>
+            <p>
+              Additional pages and projects will be added here as the site grows.
+            </p>
+          </div>
+        </nav>
+
+        <footer className="welcome-footer">
+          <p>Built with React + Vite | Hosted on GitHub Pages</p>
+        </footer>
+      </div>
+    </div>
+  )
+}
+
+export default Welcome
