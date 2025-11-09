@@ -1,5 +1,7 @@
 # AI Pair Programming: Best Practices
 
+*November 9, 2025*
+
 AI coding assistants have transformed how we write software, but like any tool, their effectiveness depends on how we use them. After working extensively with AI pair programming tools, I've identified key practices that maximize value while maintaining code quality and learning.
 
 ## Understanding the Partnership
@@ -94,3 +96,7 @@ As these tools evolve, the developers who thrive will be those who master the ar
 ---
 
 **What's your experience with AI pair programming?** I'd love to hear what patterns you've discovered and pitfalls you've avoided. The field is evolving rapidly, and we all benefit from shared learnings.
+
+---
+
+*This article was created with AI assistance using Claude Sonnet 4.5 (claude-sonnet-4-5-20250929).*
