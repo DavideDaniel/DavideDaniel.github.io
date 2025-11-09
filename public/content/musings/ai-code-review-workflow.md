@@ -1,6 +1,6 @@
 # Integrating AI into Code Review Workflows
 
-Code review is where we catch bugs, share knowledge, and maintain standards. AI assistants are increasingly being integrated into this critical process—but how do we do it without losing the human insight that makes reviews valuable?
+Code review is where we catch bugs, share knowledge, and maintain standards. AI assistants are increasingly being integrated into this critical process - but how do we do it without losing the human insight that makes reviews valuable?
 
 ## The Promise and the Pitfall
 
@@ -188,7 +188,7 @@ db.execute(query, [userId]);
 ```
 
 **Human reviewer adds:**
-> "Good catch by AI and good fix. Consider using our ORM for this—it handles parameterization automatically and provides better type safety. Example: `User.findById(userId)`"
+> "Good catch by AI and good fix. Consider using our ORM for this - it handles parameterization automatically and provides better type safety. Example: `User.findById(userId)`"
 
 ### Example 2: False Positive
 
@@ -217,7 +217,7 @@ const userNames = activeUsers.map(u => u.name);
 **Human reviewer:**
 > "This works, but you could chain these operations: `users.filter(u => u.active).map(u => u.name)`. More concise and creates one less intermediate array. Check out the 'functional programming' section in our docs for more patterns like this."
 
-AI wouldn't flag this—it's not wrong. But it's a learning opportunity.
+AI wouldn't flag this - it's not wrong. But it's a learning opportunity.
 
 ## Metrics to Track
 
@@ -249,17 +249,17 @@ Some teams reject AI entirely, missing legitimate improvements in security, test
 
 Effective AI-integrated code review:
 
-✅ **Uses AI for:** Consistency, common issues, security basics, test coverage
+- **Uses AI for:** Consistency, common issues, security basics, test coverage
 
-✅ **Relies on humans for:** Business logic, architecture, mentorship, judgment calls
+- **Relies on humans for:** Business logic, architecture, mentorship, judgment calls
 
-✅ **Treats AI as:** A helpful first pass, not a replacement
+- **Treats AI as:** A helpful first pass, not a replacement
 
-✅ **Measures:** Effectiveness and adjusts configuration based on results
+- **Measures:** Effectiveness and adjusts configuration based on results
 
 ## Looking Forward
 
-As AI code review tools improve, they'll handle more complex analysis. But the human elements—understanding business context, evaluating trade-offs, teaching teammates—will remain essential.
+As AI code review tools improve, they'll handle more complex analysis. But the human elements - understanding business context, evaluating trade-offs, teaching teammates - will remain essential.
 
 The best code review process leverages AI's speed and consistency while preserving the insight and mentorship that makes human review irreplaceable.
 

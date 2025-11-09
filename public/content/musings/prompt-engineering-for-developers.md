@@ -1,6 +1,6 @@
 # Prompt Engineering for Software Engineers
 
-As developers increasingly work alongside AI assistants, prompt engineering has become an essential skill. But unlike traditional APIs with defined interfaces, AI models respond to natural language—making the quality of your questions as important as your code.
+As developers increasingly work alongside AI assistants, prompt engineering has become an essential skill. But unlike traditional APIs with defined interfaces, AI models respond to natural language - making the quality of your questions as important as your code.
 
 ## The Developer's Advantage
 
@@ -20,9 +20,9 @@ Effective prompts share common characteristics:
 ### 1. Specificity Over Brevity
 
 ```markdown
-❌ Bad: "Write a sorting function"
+Bad: "Write a sorting function"
 
-✅ Good: "Write a JavaScript function that sorts an array of user objects
+Good: "Write a JavaScript function that sorts an array of user objects
 by their 'lastActive' timestamp in descending order (most recent first),
 handling null/undefined timestamps by placing those users at the end"
 ```
@@ -150,16 +150,16 @@ Now create similar functions for:
 ## Anti-Patterns to Avoid
 
 ### 1. The Vague Ask
-❌ *"Make this better"* - Better how? Performance? Readability? Security?
+Bad: *"Make this better"* - Better how? Performance? Readability? Security?
 
 ### 2. The Missing Context
-❌ *"Fix this error"* [pastes error] - What were you trying to do? What's the code?
+Bad: *"Fix this error"* [pastes error] - What were you trying to do? What's the code?
 
 ### 3. The Assumption Overload
-❌ *"Add the login feature"* - Using what auth system? What user model? What security requirements?
+Bad: *"Add the login feature"* - Using what auth system? What user model? What security requirements?
 
 ### 4. The Kitchen Sink
-❌ Pasting 500 lines of code with *"Help"* - Narrow the scope to the specific issue.
+Bad: Pasting 500 lines of code with *"Help"* - Narrow the scope to the specific issue.
 
 ## Iterative Refinement
 
@@ -212,7 +212,7 @@ The second version leaves less to chance and gets better results on the first tr
 
 ## Conclusion
 
-Prompt engineering for developers isn't about learning a new language—it's about applying your existing specification and communication skills to a new interface. The clearer and more specific you are, the better your results.
+Prompt engineering for developers isn't about learning a new language - it's about applying your existing specification and communication skills to a new interface. The clearer and more specific you are, the better your results.
 
 As AI tools become central to development workflows, this skill will differentiate efficient developers from those constantly fighting their tools.
 
