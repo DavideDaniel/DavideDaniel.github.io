@@ -14,22 +14,21 @@ function Welcome() {
     <div className="welcome-container">
       <div className="welcome-content">
         <header className="welcome-header">
-          <h1>Welcome to My Portfolio</h1>
-          <p className="subtitle">David Daniel | Web Developer</p>
+          <h1 className="subtitle">David Daniel | Principal Engineer</h1>
         </header>
 
         <section className="welcome-description">
           <p>
-            This site hosts multiple pages showcasing different aspects of my work and experience.
-            Explore the sections below to learn more about me and my projects.
+            This site hosts multiple pages with different content and experiments.
+            Explore the sections below to see what's available.
           </p>
         </section>
 
         <nav className="welcome-nav">
           <div className="nav-card">
-            <h2>📝 Bio & Portfolio</h2>
+            <h2>📝 Bio (Archive)</h2>
             <p>
-              View my professional bio, work samples, experience, testimonials, and contact information.
+              Historical content from when I originally became a web developer. Work samples are no longer live.
             </p>
             <Link to="/bio" className="nav-link">
               Visit Bio →
