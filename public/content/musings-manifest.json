@@ -1,6 +1,17 @@
 {
   "musings": [
     {
+      "id": "the-uneven-revolution",
+      "title": "The Uneven Revolution: Why Some Teams Are Thriving with AI Development Tools (And Others Are Just Surviving)",
+      "slug": "the-uneven-revolution",
+      "category": "Team Practices",
+      "topics": ["AI", "Team Dynamics", "Adoption", "Best Practices"],
+      "date": "2025-07-17",
+      "author": "David Daniel",
+      "excerpt": "Why AI tool adoption outcomes vary dramatically between teams, and what the successful ones do differently.",
+      "file": "/content/musings/the-uneven-revolution.md"
+    },
+    {
       "id": "ai-pair-programming-best-practices",
       "title": "AI Pair Programming: Best Practices",
       "slug": "ai-pair-programming-best-practices",
