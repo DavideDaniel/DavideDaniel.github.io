@@ -1,6 +1,6 @@
 # The Uneven Revolution: Why Some Teams Are Thriving with AI Development Tools (And Others Are Just Surviving)
 
-*July 17, 2025*
+*December 10, 2025*
 
 If you have been following the discourse around AI-assisted development, you might think every engineering team is now shipping features at twice the speed while sipping coffee and contemplating philosophy. The reality, as anyone actually doing this work knows, is considerably more nuanced.
 
