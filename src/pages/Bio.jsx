@@ -96,25 +96,25 @@ function Bio() {
   // Testimonials data
   const testimonials = [
     {
-      image: 'https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAMLAAAAJDIyY2YwNzk3LTU3ZGItNDg2Zi1iYWQ1LWI5OWI4ZjAxNzFhMA.jpg',
+      image: '/testimonials/ashley-singh.jpg',
       name: 'Ashley K Singh',
       title: 'Product Manager at VenueNext',
       quote: 'I was the Product Manager on LOList. David is a passionate and hard working individual. As the Lead Developer on LOList, he led the charge on implementing user stories and managing a team of two other developers. He is organized and ambitious. He seized the opportunity to help develop the look and feel of the app as well. I highly recommend David for any team.'
     },
     {
-      image: 'https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAEEAAAAJDhkOTJmODUxLTRkZTEtNGM4Ni05OGY0LTg5MDVmOGEwMDExOA.jpg',
+      image: '/testimonials/ciara-yu.jpg',
       name: 'Ciara Yu',
       title: 'Support Engineer at Maxymiser',
       quote: "David is a talented, driven individual with a true passion for optimizing the user experience and making the tools we use everyday easy and enjoyable to use. I was lucky enough to work with him at Maxymiser, where I got to witness his work ethic firsthand. We managed several client accounts together, supporting their customer experience optimization program through sophisticated online A/B and MVT campaigns. As a support team, I extremely valued his talent to not only tend to the problem at hand but also step back and view the bigger picture to identify the optimal solution. This proved invaluable on several occasions, as he was able to build scalable, reusable solutions that enhanced our ability to deliver quality campaigns in an efficient manner. He's an asset to any team, as he's always willing to help, asks the right questions, and views any challenges as another opportunity to learn something new. I highly recommend David, and hope to get to work with him again in the future!"
     },
     {
-      image: 'https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAANfAAAAJDBhZjdjOTFhLWEwMjktNDhhOS1iMGRlLWUzMjFiOWFhNGRkNQ.jpg',
+      image: '/testimonials/jerome-hardaway.jpg',
       name: 'Jerome Hardaway',
       title: 'Web Developer at HigherVisibility',
       quote: 'I met David through General Assembly and the best way to describe him is as the total package. His natural prowess in quickly learning programming languages, as well as rapidly applying them to various problems coupled with his leadership ability made him an essential asset in our class and several of our projects. Any company that David goes to will have their return on the investment exceed their expectations.'
     },
     {
-      image: 'https://media.licdn.com/mpr/mpr/shrinknp_100_100/AAEAAQAAAAAAAAYeAAAAJDVlODZlZjAwLTI2YWUtNDE3Ni05ZjljLWM1NDRmZGIwN2Y4Mg.jpg',
+      image: '/testimonials/jason-ng.jpg',
       name: 'Jason Ng',
       title: 'Instructor/Developer at Byte Academy',
       quote: "David and I were both in General Assembly's web development accelerator program. I spent everyday for four months coding and learning alongside him. His hunger for knowledge was something I have never encountered before. The work ethic, and problem solving skills he displayed were extremely motivating and inspired those around him. It is clear he is dedicated to producing clean, and efficient code. Any organization will have an amazing asset with David on their team."
