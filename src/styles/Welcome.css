@@ -107,12 +107,38 @@
   opacity: 1;
 }
 
+.nav-card.secondary {
+  opacity: 0.75;
+  font-size: 0.95rem;
+}
+
+.nav-card.secondary h2 {
+  font-size: 1.25rem;
+}
+
 .welcome-footer {
   text-align: center;
   padding-top: 30px;
   border-top: 1px solid #e0e0e0;
   color: var(--light-text);
   font-size: 0.9rem;
+}
+
+.footer-links {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: var(--light-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-color);
 }
 
 /* Responsive Design */

@@ -19,12 +19,25 @@ function Welcome() {
 
         <section className="welcome-description">
           <p>
-            This site hosts multiple pages with different content and experiments.
-            Explore the sections below to see what's available.
+            Principal Engineer specializing in agentic engineering, AI transformations,
+            cloud architecture, and scalable platform design. This site hosts technical
+            research on spec-driven development frameworks and agentic AI tools, alongside
+            reflections on AI engineering practices.
           </p>
         </section>
 
         <nav className="welcome-nav">
+          <div className="nav-card">
+            <h2>🔬 Technical Research</h2>
+            <p>
+              Spec-driven development frameworks, agentic AI tools, and research into
+              methodologies like BMAD and SpecKit for scalable AI-native engineering.
+            </p>
+            <a href="/research/" className="nav-link">
+              Explore Research →
+            </a>
+          </div>
+
           <div className="nav-card">
             <h2>📝 Bio (Archive)</h2>
             <p>
@@ -35,10 +48,10 @@ function Welcome() {
             </Link>
           </div>
 
-          <div className="nav-card">
-            <h2>💭 Musings on AI Engineering</h2>
+          <div className="nav-card secondary">
+            <h2>💭 Musings</h2>
             <p>
-              Practical insights on AI's impact on software engineering—covering workflows, tools, and best practices.
+              Reflections on AI's impact on software engineering.
             </p>
             <Link to="/musings" className="nav-link">
               Read Musings →
@@ -47,7 +60,11 @@ function Welcome() {
         </nav>
 
         <footer className="welcome-footer">
-          <p>Built with React + Vite | Hosted on GitHub Pages</p>
+          <p>&copy; 2026 David Daniel &middot; Principal Engineer</p>
+          <div className="footer-links">
+            <a href="https://linkedin.com/in/davidedaniel/" rel="me">LinkedIn</a>
+            <a href="https://github.com/DavideDaniel" rel="me">GitHub</a>
+          </div>
         </footer>
       </div>
     </div>
