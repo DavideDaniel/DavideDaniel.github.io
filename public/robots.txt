@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /research/musings/
+
+Sitemap: https://daviddaniel.tech/research/sitemap.xml

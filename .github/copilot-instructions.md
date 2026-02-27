@@ -171,3 +171,15 @@ function smoothScrollTo(targetId) {
 ```
 
 This helps both GitHub Copilot and Claude understand the codebase better!
+
+## SEO Requirements
+
+This portfolio site is the root deployment for `daviddaniel.tech`. It serves as the crawl entry point for all content including the research subsite at `/research/`.
+
+### Critical Rules
+
+- **`public/robots.txt`** is the canonical robots.txt for the entire daviddaniel.tech domain. Do not remove it or move it to another location.
+- **`index.html`** must always contain a server-rendered (non-JS) link to `/research/` so search engine crawlers can discover the research subsite. Do not remove the `<noscript>` block or the crawlable anchor link.
+- Any navigation changes must preserve crawlable links to the research section.
+- The `<head>` section of `index.html` contains structured data (JSON-LD), Open Graph tags, and a canonical URL. These must be maintained when editing the file.
+- If new pages are added, consider whether they need `noindex` meta tags (e.g., draft or private content).

@@ -4,11 +4,61 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="David Daniel - Principal Engineer" />
+    <meta name="description" content="David Daniel - Principal Engineer. Portfolio, technical research, and musings on AI engineering, software architecture, and modern development practices." />
+    <meta name="author" content="David Daniel" />
+    <link rel="canonical" href="https://daviddaniel.tech/" />
     <title>David Daniel | Principal Engineer</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="David Daniel | Principal Engineer" />
+    <meta property="og:description" content="Portfolio, technical research, and musings on AI engineering, software architecture, and modern development practices." />
+    <meta property="og:url" content="https://daviddaniel.tech/" />
+    <meta property="og:site_name" content="David Daniel" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="David Daniel | Principal Engineer" />
+    <meta name="twitter:description" content="Portfolio, technical research, and musings on AI engineering, software architecture, and modern development practices." />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "David Daniel",
+        "url": "https://daviddaniel.tech/",
+        "description": "Portfolio, technical research, and musings on AI engineering, software architecture, and modern development practices.",
+        "author": {
+          "@type": "Person",
+          "name": "David Daniel",
+          "jobTitle": "Principal Engineer",
+          "url": "https://daviddaniel.tech/",
+          "sameAs": [
+            "https://linkedin.com/in/davidedaniel/",
+            "https://github.com/DavideDaniel"
+          ]
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Server-rendered navigation for search engine crawlability -->
+    <noscript>
+      <nav>
+        <h1>David Daniel | Principal Engineer</h1>
+        <ul>
+          <li><a href="/bio">Bio</a></li>
+          <li><a href="/musings">Musings on AI Engineering</a></li>
+          <li><a href="/research/">Technical Research</a></li>
+        </ul>
+      </nav>
+    </noscript>
+    <!-- Crawlable link to research subsite (hidden, replaced by React app on render) -->
+    <a href="/research/" style="position:absolute;left:-9999px;opacity:0" aria-hidden="true" tabindex="-1">Technical Research</a>
   </body>
 </html>
