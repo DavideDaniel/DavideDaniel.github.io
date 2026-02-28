@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://daviddaniel.tech/sitemap.xml
+Sitemap: https://daviddaniel.tech/research/sitemap.xml
