@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import ProjectCard from '../components/ProjectCard'
 import Testimonial from '../components/Testimonial'
 import ResumeModal from '../components/ResumeModal'
@@ -123,6 +124,20 @@ function Bio() {
 
   return (
     <div className="bio-container">
+      <Helmet>
+        <title>Bio — David Daniel | Web Developer Portfolio</title>
+        <meta name="description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
+        <link rel="canonical" href="https://daviddaniel.tech/bio" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="Bio — David Daniel | Web Developer Portfolio" />
+        <meta property="og:description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
+        <meta property="og:url" content="https://daviddaniel.tech/bio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="David Daniel" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Bio — David Daniel | Web Developer Portfolio" />
+        <meta name="twitter:description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
+      </Helmet>
       {/* Navigation */}
       <nav className="bio-nav">
         <div className="nav-container">
@@ -257,17 +272,17 @@ function Bio() {
                   <i className="icon-email">✉</i>
                 </span>
               </a>
-              <a href="https://www.linkedin.com/in/davidedaniel" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/davidedaniel" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn">
                 <span className="social-icon">
                   <i className="icon-linkedin">in</i>
                 </span>
               </a>
-              <a href="https://github.com/davidedaniel" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/davidedaniel" target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
                 <span className="social-icon">
                   <i className="icon-github">⚙</i>
                 </span>
               </a>
-              <a href="https://www.twitter.com/davidedaniel" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <a href="https://www.twitter.com/davidedaniel" target="_blank" rel="me noopener noreferrer" aria-label="Twitter">
                 <span className="social-icon">
                   <i className="icon-twitter">🐦</i>
                 </span>
