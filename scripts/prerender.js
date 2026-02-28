@@ -21,13 +21,72 @@ async function prerender() {
   const { render } = await import(path.resolve(dist, 'server/entry-server.js'))
 
   for (const route of routes) {
-    const { html } = render(route)
+    const { html, helmet } = render(route)
 
-    // Inject pre-rendered content into the root div
-    const output = template.replace(
+    // Start with injecting pre-rendered content into the root div
+    let output = template.replace(
       '<div id="root"></div>',
       `<div id="root">${html}</div>`
     )
+
+    // Inject page-specific <head> tags from react-helmet-async
+    if (helmet) {
+      const helmetTitle = helmet.title.toString()
+      const helmetMeta = helmet.meta.toString()
+      const helmetLink = helmet.link.toString()
+      const helmetScript = helmet.script.toString()
+
+      // Replace the existing <title> with the page-specific one
+      if (helmetTitle) {
+        output = output.replace(/<title>[^<]*<\/title>/, helmetTitle)
+      }
+
+      // Replace homepage meta description and robot-indexable meta tags with page-specific ones
+      // Remove existing meta tags that helmet will provide (description, robots, og:*, twitter:*)
+      if (helmetMeta) {
+        output = output.replace(
+          /\s*<meta name="description"[^>]*>/g,
+          ''
+        )
+        output = output.replace(
+          /\s*<meta name="robots"[^>]*>/g,
+          ''
+        )
+        output = output.replace(
+          /\s*<meta property="og:[^"]*"[^>]*>/g,
+          ''
+        )
+        output = output.replace(
+          /\s*<!-- Open Graph -->/g,
+          ''
+        )
+        output = output.replace(
+          /\s*<meta name="twitter:[^"]*"[^>]*>/g,
+          ''
+        )
+        output = output.replace(
+          /\s*<!-- Twitter Card -->/g,
+          ''
+        )
+        // Inject helmet meta tags before </head>
+        output = output.replace('</head>', `    ${helmetMeta}\n  </head>`)
+      }
+
+      // Replace homepage canonical link with page-specific one
+      if (helmetLink) {
+        output = output.replace(
+          /\s*<link rel="canonical"[^>]*>/g,
+          ''
+        )
+        // Inject helmet link tags before </head>
+        output = output.replace('</head>', `    ${helmetLink}\n  </head>`)
+      }
+
+      // Inject any page-specific script tags (e.g., JSON-LD structured data)
+      if (helmetScript) {
+        output = output.replace('</head>', `    ${helmetScript}\n  </head>`)
+      }
+    }
 
     // Determine output path
     const outputPath =
