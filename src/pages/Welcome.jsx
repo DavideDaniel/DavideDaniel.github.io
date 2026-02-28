@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import '../styles/Welcome.css'
 
 /**
@@ -12,6 +13,20 @@ import '../styles/Welcome.css'
 function Welcome() {
   return (
     <div className="welcome-container">
+      <Helmet>
+        <title>David Daniel | Principal Engineer</title>
+        <meta name="description" content="David Daniel — Principal Engineer specializing in agentic engineering, AI transformations, cloud architecture, and scalable platform design." />
+        <link rel="canonical" href="https://daviddaniel.tech/" />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="David Daniel | Principal Engineer" />
+        <meta property="og:description" content="David Daniel — Principal Engineer specializing in agentic engineering, AI transformations, cloud architecture, and scalable platform design." />
+        <meta property="og:url" content="https://daviddaniel.tech/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="David Daniel" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="David Daniel | Principal Engineer" />
+        <meta name="twitter:description" content="David Daniel — Principal Engineer specializing in agentic engineering, AI transformations, cloud architecture, and scalable platform design." />
+      </Helmet>
       <div className="welcome-content">
         <header className="welcome-header">
           <h1 className="subtitle">David Daniel | Principal Engineer</h1>

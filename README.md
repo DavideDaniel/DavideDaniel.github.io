@@ -170,7 +170,7 @@ The project uses GitHub Actions for automatic deployment:
 1. Push to `main` branch
 2. GitHub Actions builds the project
 3. Deploys to GitHub Pages
-4. Site is live at `https://davidedaniel.github.io`
+4. Site is live at `https://daviddaniel.tech`
 
 ### Manual Deployment
 
@@ -226,7 +226,7 @@ This project is open source and available under the MIT License.
 **David Enoch Daniel** - Web Developer
 
 - GitHub: [@DavideDaniel](https://github.com/DavideDaniel)
-- Portfolio: [davidedaniel.github.io](https://davidedaniel.github.io)
+- Portfolio: [daviddaniel.tech](https://daviddaniel.tech)
 
 ---
 

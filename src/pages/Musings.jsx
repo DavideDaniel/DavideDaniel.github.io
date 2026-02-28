@@ -13,6 +13,7 @@
 
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import '../styles/Musings.css';
@@ -136,10 +137,28 @@ const Musings = () => {
     setMarkdownContent('');
   };
 
+  const musingsHelmet = (
+    <Helmet>
+      <title>Musings on AI Engineering | David Daniel</title>
+      <meta name="description" content="Practical insights on AI's impact on software engineering — covering workflows, tools, and best practices for modern development." />
+      <link rel="canonical" href="https://daviddaniel.tech/musings" />
+      <meta name="robots" content="index, follow" />
+      <meta property="og:title" content="Musings on AI Engineering | David Daniel" />
+      <meta property="og:description" content="Practical insights on AI's impact on software engineering — covering workflows, tools, and best practices for modern development." />
+      <meta property="og:url" content="https://daviddaniel.tech/musings" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="David Daniel" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:title" content="Musings on AI Engineering | David Daniel" />
+      <meta name="twitter:description" content="Practical insights on AI's impact on software engineering — covering workflows, tools, and best practices for modern development." />
+    </Helmet>
+  );
+
   // Render loading state
   if (isLoading) {
     return (
       <div className="musings-page">
+        {musingsHelmet}
         <div className="musings-container">
           <div className="loading">Loading musings...</div>
         </div>
@@ -151,6 +170,7 @@ const Musings = () => {
   if (error) {
     return (
       <div className="musings-page">
+        {musingsHelmet}
         <div className="musings-container">
           <div className="error">
             <h2>Error Loading Content</h2>
@@ -166,6 +186,7 @@ const Musings = () => {
   if (selectedMusing) {
     return (
       <div className="musings-page">
+        {musingsHelmet}
         <div className="musings-container">
           <div className="article-view">
             <div className="article-header">
@@ -199,6 +220,7 @@ const Musings = () => {
   // Render list view (default)
   return (
     <div className="musings-page">
+      {musingsHelmet}
       <div className="musings-container">
         {/* Header */}
         <header className="musings-header">

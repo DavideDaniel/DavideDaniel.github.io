@@ -10,4 +10,8 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
   },
+  // SSR config for pre-rendering — ensures CSS imports are handled correctly
+  ssr: {
+    noExternal: ['react-helmet-async'],
+  },
 })
