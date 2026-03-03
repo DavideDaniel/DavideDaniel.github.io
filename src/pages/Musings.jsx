@@ -142,7 +142,7 @@ const Musings = () => {
       <title>Musings on AI Engineering | David Daniel</title>
       <meta name="description" content="Practical insights on AI's impact on software engineering — covering workflows, tools, and best practices for modern development." />
       <link rel="canonical" href="https://daviddaniel.tech/musings" />
-      <meta name="robots" content="index, follow" />
+      <meta name="robots" content="noindex, follow" />
       <meta property="og:title" content="Musings on AI Engineering | David Daniel" />
       <meta property="og:description" content="Practical insights on AI's impact on software engineering — covering workflows, tools, and best practices for modern development." />
       <meta property="og:url" content="https://daviddaniel.tech/musings" />

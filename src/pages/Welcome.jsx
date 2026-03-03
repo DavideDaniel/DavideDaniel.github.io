@@ -68,7 +68,7 @@ function Welcome() {
             <p>
               Reflections on AI's impact on software engineering.
             </p>
-            <Link to="/musings" className="nav-link">
+            <Link to="/musings" className="nav-link" rel="nofollow">
               Read Musings →
             </Link>
           </div>
