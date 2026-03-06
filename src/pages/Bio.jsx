@@ -272,12 +272,12 @@ function Bio() {
                   <i className="icon-email">✉</i>
                 </span>
               </a>
-              <a href="https://www.linkedin.com/in/davidedaniel" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn">
+              <a href="https://linkedin.com/in/davidedaniel/" target="_blank" rel="me noopener noreferrer" aria-label="LinkedIn">
                 <span className="social-icon">
                   <i className="icon-linkedin">in</i>
                 </span>
               </a>
-              <a href="https://github.com/davidedaniel" target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
+              <a href="https://github.com/DavideDaniel" target="_blank" rel="me noopener noreferrer" aria-label="GitHub">
                 <span className="social-icon">
                   <i className="icon-github">⚙</i>
                 </span>
