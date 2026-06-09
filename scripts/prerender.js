@@ -14,7 +14,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const dist = path.resolve(__dirname, '../dist')
 
 // All routes to pre-render — keep in sync with src/App.jsx
-const routes = ['/', '/bio', '/musings']
+const routes = ['/', '/about', '/bio']
 
 async function prerender() {
   const template = fs.readFileSync(path.resolve(dist, 'index.html'), 'utf-8')

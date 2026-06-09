@@ -124,16 +124,27 @@ The project structure and comments are designed to work seamlessly with Claude f
 
 ### Welcome Page (`/`)
 
-The landing page that introduces the portfolio and links to different sections.
+The landing page that introduces the site and links to different sections.
 
-### Bio Page (`/bio`)
+### About Page (`/about`)
 
-Portfolio page with:
-- Professional bio
+The current professional bio — the primary, indexable authorship page. Covers
+current role and focus areas (agentic engineering, AI transformations, cloud
+architecture, scalable platform design) with `Person`/`ProfilePage` structured
+data, and links out to the research subsite and the archived early portfolio.
+
+### Bio Page (`/bio`) — Archive
+
+The archived early-career web-developer portfolio. Still indexable but
+low-priority; flagged in-page as an archive and superseded by `/about`. Contains:
+- Early bio
 - Sample work/projects
 - Experience and skills
 - Testimonials
 - Contact information
+
+> The retired `/musings` section's content is preserved (un-deployed) in
+> `content-archive/musings/`.
 
 ## 🔄 Migration from Static Site
 
