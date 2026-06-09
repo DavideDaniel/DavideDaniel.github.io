@@ -41,7 +41,7 @@ function About() {
       '@type': 'Person',
       name: 'David Daniel',
       jobTitle: 'Principal Engineer',
-      url: 'https://daviddaniel.tech/about',
+      url: 'https://daviddaniel.tech/about/',
       worksFor: { '@type': 'Organization', name: 'Nike' },
       affiliation: { '@type': 'Organization', name: 'Proof Labs' },
       alumniOf: { '@type': 'EducationalOrganization', name: 'General Assembly' },
@@ -71,11 +71,11 @@ function About() {
       <Helmet>
         <title>About — David Daniel | Principal Engineer &amp; Builder</title>
         <meta name="description" content="David Daniel — principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research into what's possible beyond enterprise tooling." />
-        <link rel="canonical" href="https://daviddaniel.tech/about" />
+        <link rel="canonical" href="https://daviddaniel.tech/about/" />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="About — David Daniel | Principal Engineer &amp; Builder" />
         <meta property="og:description" content="David Daniel — principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research." />
-        <meta property="og:url" content="https://daviddaniel.tech/about" />
+        <meta property="og:url" content="https://daviddaniel.tech/about/" />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="David Daniel" />
         <meta name="twitter:card" content="summary" />
@@ -151,7 +151,7 @@ function About() {
               <span> Spec-driven development frameworks and agentic AI tooling.</span>
             </li>
             <li>
-              <Link to="/bio">Early Portfolio (Archive) →</Link>
+              <Link to="/bio/">Early Portfolio (Archive) →</Link>
               <span> Archived work from when I first became a web developer.</span>
             </li>
           </ul>

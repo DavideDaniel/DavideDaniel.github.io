@@ -47,7 +47,7 @@ function Welcome() {
               Current professional bio — principal engineer and around-the-clock
               builder working in AI-native engineering, cloud architecture, and Proof Labs.
             </p>
-            <Link to="/about" className="nav-link">
+            <Link to="/about/" className="nav-link">
               Read Bio →
             </Link>
           </div>
@@ -68,7 +68,7 @@ function Welcome() {
             <p>
               Archived content from when I originally became a web developer. Work samples are no longer live.
             </p>
-            <Link to="/bio" className="nav-link">
+            <Link to="/bio/" className="nav-link">
               Visit Archive →
             </Link>
           </div>
