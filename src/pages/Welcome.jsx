@@ -36,12 +36,22 @@ function Welcome() {
           <p>
             Principal Engineer specializing in agentic engineering, AI transformations,
             cloud architecture, and scalable platform design. This site hosts technical
-            research on spec-driven development frameworks and agentic AI tools, alongside
-            reflections on AI engineering practices.
+            research on spec-driven development frameworks and agentic AI tools.
           </p>
         </section>
 
         <nav className="welcome-nav">
+          <div className="nav-card">
+            <h2>👤 About</h2>
+            <p>
+              Current professional bio — principal engineer and around-the-clock
+              builder working in AI-native engineering, cloud architecture, and Proof Labs.
+            </p>
+            <Link to="/about/" className="nav-link">
+              Read Bio →
+            </Link>
+          </div>
+
           <div className="nav-card">
             <h2>🔬 Technical Research</h2>
             <p>
@@ -53,23 +63,13 @@ function Welcome() {
             </a>
           </div>
 
-          <div className="nav-card">
-            <h2>📝 Bio (Archive)</h2>
-            <p>
-              Historical content from when I originally became a web developer. Work samples are no longer live.
-            </p>
-            <Link to="/bio" className="nav-link">
-              Visit Bio →
-            </Link>
-          </div>
-
           <div className="nav-card secondary">
-            <h2>💭 Musings</h2>
+            <h2>📝 Early Portfolio (Archive)</h2>
             <p>
-              Reflections on AI's impact on software engineering.
+              Archived content from when I originally became a web developer. Work samples are no longer live.
             </p>
-            <Link to="/musings" className="nav-link" rel="nofollow">
-              Read Musings →
+            <Link to="/bio/" className="nav-link">
+              Visit Archive →
             </Link>
           </div>
         </nav>

@@ -125,19 +125,30 @@ function Bio() {
   return (
     <div className="bio-container">
       <Helmet>
-        <title>Bio — David Daniel | Web Developer Portfolio</title>
-        <meta name="description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
-        <link rel="canonical" href="https://daviddaniel.tech/bio" />
+        <title>Bio (Archive) — David Daniel | Early Web Developer Portfolio</title>
+        <meta name="description" content="Archived early-career portfolio of David Daniel from his web-development years — projects, skills, and testimonials. For current work see the About page." />
+        <link rel="canonical" href="https://daviddaniel.tech/bio/" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Bio — David Daniel | Web Developer Portfolio" />
-        <meta property="og:description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
-        <meta property="og:url" content="https://daviddaniel.tech/bio" />
+        <meta property="og:title" content="Bio (Archive) — David Daniel | Early Web Developer Portfolio" />
+        <meta property="og:description" content="Archived early-career portfolio of David Daniel from his web-development years — projects, skills, and testimonials. For current work see the About page." />
+        <meta property="og:url" content="https://daviddaniel.tech/bio/" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="David Daniel" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Bio — David Daniel | Web Developer Portfolio" />
-        <meta name="twitter:description" content="David Daniel's portfolio — web developer with experience in React, Node.js, and full-stack development. View projects, skills, and testimonials." />
+        <meta name="twitter:title" content="Bio (Archive) — David Daniel | Early Web Developer Portfolio" />
+        <meta name="twitter:description" content="Archived early-career portfolio of David Daniel from his web-development years. For current work see the About page." />
       </Helmet>
+
+      {/* Archive notice — this page is the old portfolio; current bio lives at /about */}
+      <div className="archive-banner">
+        <span className="archive-badge">📦 Archive</span>
+        <p>
+          This is an archived portfolio from my early web-development years. For my
+          current work, see <Link to="/about/">About</Link> or the{' '}
+          <Link to="/">home page</Link>.
+        </p>
+      </div>
+
       {/* Navigation */}
       <nav className="bio-nav">
         <div className="nav-container">
