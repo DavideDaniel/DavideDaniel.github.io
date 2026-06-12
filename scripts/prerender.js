@@ -100,10 +100,15 @@ async function prerender() {
     console.log(`Pre-rendered: ${route} -> ${path.relative(dist, outputPath)}`)
   }
 
-  // Create 404.html as a copy of index.html for GitHub Pages SPA fallback
+  // Create 404.html as a copy of index.html for GitHub Pages SPA fallback.
+  // Legacy research paths (/papers/*, /articles/*) predate the /research/ base
+  // and still get crawled occasionally (see research repo issue #28); redirect
+  // them client-side before the SPA hydrates.
   const indexHtml = fs.readFileSync(path.resolve(dist, 'index.html'), 'utf-8')
-  fs.writeFileSync(path.resolve(dist, '404.html'), indexHtml)
-  console.log('Created 404.html for SPA fallback')
+  const legacyRedirect =
+    '<script>(function(){var p=location.pathname;if(/^\\/(papers|articles)\\//.test(p)){location.replace("/research"+p+location.search+location.hash)}})()</script>'
+  fs.writeFileSync(path.resolve(dist, '404.html'), indexHtml.replace('<head>', '<head>' + legacyRedirect))
+  console.log('Created 404.html for SPA fallback (with legacy /papers,/articles redirect)')
 
   // Clean up server bundle (not needed in deployment)
   fs.rmSync(path.resolve(dist, 'server'), { recursive: true, force: true })
