@@ -58,6 +58,14 @@ function Welcome() {
               Spec-driven development frameworks, agentic AI tools, and research into
               methodologies like BMAD and SpecKit for scalable AI-native engineering.
             </p>
+            <ul className="research-list">
+              <li><a href="/research/papers/harness-engineering/">Harness Engineering</a></li>
+              <li><a href="/research/papers/agentic-pricing-break/">When the Loop Never Stops</a></li>
+              <li><a href="/research/papers/autonomous-agents/">Autonomous AI Agents</a></li>
+              <li><a href="/research/papers/sdd-frameworks/">Spec-Driven Development Frameworks</a></li>
+              <li><a href="/research/papers/agentic-tools/">Agentic Development Tools</a></li>
+              <li><a href="/research/articles/specification-layer/">The Specification Layer</a></li>
+            </ul>
             <a href="/research/" className="nav-link">
               Explore Research →
             </a>

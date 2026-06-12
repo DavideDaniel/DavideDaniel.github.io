@@ -159,3 +159,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Deep links inside the research nav-card (research repo issue #28: internal
+   links to specific papers help crawled-not-indexed pages) */
+.research-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+}
+.research-list li {
+  margin: 0.25rem 0;
+}
