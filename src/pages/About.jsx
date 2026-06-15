@@ -3,34 +3,36 @@ import { Helmet } from 'react-helmet-async'
 import '../styles/About.css'
 
 /**
- * About page component — current professional bio.
+ * About page component: current professional bio.
  *
  * This is the primary, indexable authorship page for the site. It establishes
- * David Daniel's professional identity (E-E-A-T) as an around-the-clock builder —
- * principal engineer by day, Proof Labs and personal projects on the side — and
+ * David Daniel's professional identity (E-E-A-T) as an around-the-clock builder,
+ * principal engineer by day, Proof Labs and personal projects on the side, and
  * links out to the technical research subsite and the archived early portfolio.
  *
- * @ai-context Career history sourced from David's LinkedIn (linkedin.com/in/davidedaniel)
- * as of 2026-06; framing per David's direction (build around the clock; Nike is where
- * he works, not the whole story). Verify role/title/dates and Proof Labs details as they change.
+ * @ai-context Keep this page deliberately high-level and dateless. LinkedIn
+ * (linkedin.com/in/davidedaniel) is the source of truth for career history, so do
+ * not add employment dates, describe the day-to-day of the Nike role, or list
+ * language/framework specifics. Preserve the topical expertise terms, the
+ * /research link, and the ProfilePage schema, which carry the SEO value.
  */
 function About() {
-  // Areas of expertise — current focus plus the platform/commerce track record.
+  // Areas of expertise: current focus plus the platform/commerce track record.
   const expertise = [
     'AI-native development',
     'Agentic engineering',
     'Cloud architecture',
     'Digital commerce platforms',
-    'Full-stack engineering (Node.js / React)',
+    'Full-stack engineering',
     'Technical leadership',
   ]
 
-  // Selected experience — current work first; Nike progression collapsed to one line.
+  // Selected experience, current work first. No dates here; full history lives on LinkedIn.
   const experience = [
-    { role: 'Founder & Builder', org: 'Proof Labs', period: 'Ongoing' },
-    { role: 'Principal Engineer (prev. Lead, Full Stack)', org: 'Nike', period: '2016 – Present' },
-    { role: 'Solutions Engineer', org: 'Oracle Maxymiser', period: '2015 – 2016' },
-    { role: 'Instructor & Technical Architect', org: 'Hack Oregon', period: '2016 – Present' },
+    { role: 'Founder & Builder', org: 'Proof Labs' },
+    { role: 'Principal Engineer', org: 'Nike' },
+    { role: 'Solutions Engineer', org: 'Oracle Maxymiser' },
+    { role: 'Instructor & Technical Architect', org: 'Hack Oregon' },
   ]
 
   // Person / ProfilePage structured data for authorship signals.
@@ -44,7 +46,6 @@ function About() {
       url: 'https://daviddaniel.tech/about/',
       worksFor: { '@type': 'Organization', name: 'Nike' },
       affiliation: { '@type': 'Organization', name: 'Proof Labs' },
-      alumniOf: { '@type': 'EducationalOrganization', name: 'General Assembly' },
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Portland',
@@ -69,18 +70,18 @@ function About() {
   return (
     <div className="about-container">
       <Helmet>
-        <title>About — David Daniel | Principal Engineer &amp; Builder</title>
-        <meta name="description" content="David Daniel — principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research into what's possible beyond enterprise tooling." />
+        <title>About David Daniel | Principal Engineer &amp; Builder</title>
+        <meta name="description" content="David Daniel, principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research into what's possible beyond enterprise tooling." />
         <link rel="canonical" href="https://daviddaniel.tech/about/" />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="About — David Daniel | Principal Engineer &amp; Builder" />
-        <meta property="og:description" content="David Daniel — principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research." />
+        <meta property="og:title" content="About David Daniel | Principal Engineer &amp; Builder" />
+        <meta property="og:description" content="David Daniel, principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research." />
         <meta property="og:url" content="https://daviddaniel.tech/about/" />
         <meta property="og:type" content="profile" />
         <meta property="og:site_name" content="David Daniel" />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="About — David Daniel | Principal Engineer &amp; Builder" />
-        <meta name="twitter:description" content="Principal engineer and around-the-clock builder — AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research." />
+        <meta name="twitter:title" content="About David Daniel | Principal Engineer &amp; Builder" />
+        <meta name="twitter:description" content="Principal engineer and around-the-clock builder. AI-native and agentic engineering, cloud architecture, Proof Labs, and independent research." />
         <script type="application/ld+json">{JSON.stringify(profileJsonLd)}</script>
       </Helmet>
 
@@ -99,14 +100,14 @@ function About() {
         <section className="about-section">
           <p className="about-lead">
             I&apos;m a principal engineer and an around-the-clock builder. By day I
-            drive modernization at Nike; nights and weekends I keep shipping —
-            running <strong>Proof Labs</strong> on the side, building apps for
-            family and friends, and prototyping ideas just to see how far they go.
+            work at Nike; nights and weekends I keep shipping, running{' '}
+            <strong>Proof Labs</strong> on the side, building apps for family and
+            friends, and prototyping ideas just to see how far they go.
           </p>
           <p>
             I research well beyond any one company&apos;s enterprise-approved
             toolset, on purpose. Working past those limits is how I find where the
-            frontier actually is — and bring it back to inform what&apos;s possible
+            frontier actually is, and bring it back to inform what&apos;s possible
             beyond where the teams I work with are today. My focus is AI-native and
             agentic engineering: turning emerging AI tooling into dependable,
             production-grade workflows, plus the cloud architecture and platform
@@ -130,7 +131,6 @@ function About() {
               <li key={`${job.role}-${job.org}`} className="timeline-item">
                 <span className="timeline-role">{job.role}</span>
                 <span className="timeline-org">{job.org}</span>
-                <span className="timeline-period">{job.period}</span>
               </li>
             ))}
           </ul>
@@ -139,11 +139,12 @@ function About() {
         <section className="about-section">
           <h2>Background</h2>
           <p>
-            My route into engineering was unconventional — before code I worked in
-            mental health, photography, and the arts. I went through General
-            Assembly&apos;s Web Development Immersive in 2015 and have been building
-            ever since, including ongoing community work as an instructor and
-            technical architect with Hack Oregon.
+            My route into engineering was unconventional. Before code I worked in
+            photography, then mental health, before finding my way into tech.
+            I&apos;ve been building ever since, including ongoing community work as
+            an instructor and technical architect with Hack Oregon. My full career
+            history lives on{' '}
+            <a href="https://www.linkedin.com/in/davidedaniel" target="_blank" rel="me noopener noreferrer">LinkedIn</a>.
           </p>
           <ul className="about-links">
             <li>
