@@ -29,6 +29,19 @@ async function prerender() {
       `<div id="root">${html}</div>`
     )
 
+    // The homepage's JSON-LD (WebSite/Person) is hardcoded in index.html's <head>
+    // (kept there per the SEO invariant in CLAUDE.md). For non-home routes, strip
+    // it so the homepage entity markup does not leak onto subpages — each page
+    // supplies its own structured data via Helmet (e.g. About's ProfilePage).
+    // This runs before helmet script injection below, so only template-level
+    // ld+json blocks are removed, never the page-specific ones.
+    if (route !== '/') {
+      output = output.replace(
+        /\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
+        ''
+      )
+    }
+
     // Inject page-specific <head> tags from react-helmet-async
     if (helmet) {
       const helmetTitle = helmet.title.toString()
