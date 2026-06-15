@@ -141,7 +141,7 @@ function About() {
           <p>
             My route into engineering was unconventional. Before code I worked in
             photography, then mental health, before finding my way into tech.
-            I&apos;ve been building ever since, including ongoing community work as
+            I&apos;ve been building ever since, and spent many years giving back as
             an instructor and technical architect with Hack Oregon. My full career
             history lives on{' '}
             <a href="https://www.linkedin.com/in/davidedaniel" target="_blank" rel="me noopener noreferrer">LinkedIn</a>.
